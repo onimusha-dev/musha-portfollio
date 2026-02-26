@@ -40,12 +40,12 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full relative" style={{ borderBottom: "1px solid var(--card-border)" }}>
             <div className="bg-background/80 backdrop-blur-md">
-                <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
 
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="text-base font-bold font-mono select-none hover:opacity-70 transition-opacity"
+                        className="text-lg font-bold font-mono select-none hover:opacity-70 transition-opacity"
                         style={{ color: "var(--accent)" }}
                     >
                         鬼 musha
@@ -58,7 +58,7 @@ export default function Navbar() {
                                 <Link
                                     key={href}
                                     href={href}
-                                    className={`px-3 py-1.5 rounded-lg text-sm transition-all duration-150 font-mono ${getActiveStyles(href)}`}
+                                    className={`px-3 py-1.5 rounded-lg text-base transition-all duration-150 font-mono ${getActiveStyles(href)}`}
                                 >
                                     {label}
                                 </Link>
@@ -70,10 +70,10 @@ export default function Navbar() {
                         {/* Connections */}
                         <div className="flex items-center gap-0.5 mr-2">
                             <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="p-2 text-foreground/40 hover:text-accent transition-colors">
-                                <Icons.GitHub className="w-4 h-4" />
+                                <Icons.GitHub className="w-5 h-5" />
                             </a>
                             <a href="https://twitter.com/shvmmshr" target="_blank" rel="noopener noreferrer" className="p-2 text-foreground/40 hover:text-accent transition-colors">
-                                <Icons.Twitter className="w-4 h-4" />
+                                <Icons.Twitter className="w-5 h-5" />
                             </a>
                         </div>
 
@@ -83,12 +83,12 @@ export default function Navbar() {
                     {/* Mobile: hamburger button */}
                     <button
                         onClick={() => setOpen(o => !o)}
-                        className="lg:hidden flex items-center gap-2 px-3 py-1.5 rounded-lg font-mono text-sm transition-all duration-150 text-foreground/60 hover:text-foreground hover:bg-foreground/5"
+                        className="lg:hidden flex items-center gap-2 px-3 py-1.5 rounded-lg font-mono text-base transition-all duration-150 text-foreground/60 hover:text-foreground hover:bg-foreground/5"
                         aria-label="Toggle menu"
                         aria-expanded={open}
                     >
-                        <Icons.Menu open={open} className="w-5 h-5 transition-all duration-200" />
-                        <span className="text-sm font-mono">{open ? "Close" : "Menu"}</span>
+                        <Icons.Menu open={open} className="w-6 h-6 transition-all duration-200" />
+                        <span className="text-base font-mono">{open ? "Close" : "Menu"}</span>
                     </button>
                 </div>
             </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
                     }`}
                 style={{ background: "var(--card)", borderBottom: open ? "1px solid var(--card-border)" : "none" }}
             >
-                <div className="max-w-5xl mx-auto px-6 py-5">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 py-5">
 
                     {/* Nav links */}
                     <nav className="flex flex-col gap-1 mb-5">
@@ -107,7 +107,7 @@ export default function Navbar() {
                             <Link
                                 key={href}
                                 href={href}
-                                className={`px-3 py-2.5 rounded-xl text-sm font-mono transition-all duration-150 ${getActiveStyles(href)}`}
+                                className={`px-3 py-2.5 rounded-xl text-base font-mono transition-all duration-150 ${getActiveStyles(href)}`}
                             >
                                 {label}
                             </Link>
@@ -162,11 +162,11 @@ export default function Navbar() {
 
                     {/* Mobile Connections */}
                     <div className="pt-5 mt-5 flex items-center gap-4" style={{ borderTop: "1px solid var(--card-border)" }}>
-                        <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="flex flex-1 justify-center py-2 items-center gap-2 text-sm font-mono bg-foreground/5 rounded-xl text-foreground/50 hover:text-accent hover:bg-foreground/10 transition-all">
-                            <Icons.GitHub className="w-4 h-4" /> GitHub
+                        <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="flex flex-1 justify-center py-2 items-center gap-2 text-base font-mono bg-foreground/5 rounded-xl text-foreground/50 hover:text-accent hover:bg-foreground/10 transition-all">
+                            <Icons.GitHub className="w-5 h-5" /> GitHub
                         </a>
-                        <a href="https://twitter.com/shvmmshr" target="_blank" rel="noopener noreferrer" className="flex flex-1 justify-center py-2 items-center gap-2 text-sm font-mono bg-foreground/5 rounded-xl text-foreground/50 hover:text-accent hover:bg-foreground/10 transition-all">
-                            <Icons.Twitter className="w-4 h-4" /> Twitter
+                        <a href="https://twitter.com/shvmmshr" target="_blank" rel="noopener noreferrer" className="flex flex-1 justify-center py-2 items-center gap-2 text-base font-mono bg-foreground/5 rounded-xl text-foreground/50 hover:text-accent hover:bg-foreground/10 transition-all">
+                            <Icons.Twitter className="w-5 h-5" /> Twitter
                         </a>
                     </div>
                 </div>

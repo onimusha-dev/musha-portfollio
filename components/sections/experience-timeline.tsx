@@ -2,7 +2,7 @@ import { experience } from "@/constants";
 
 function Tag({ label }: { label: string }) {
     return (
-        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20 select-none">
+        <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20 select-none cursor-pointer">
             {label}
         </span>
     );
@@ -26,8 +26,8 @@ export default function ExperienceTimeline() {
                         {/* header row */}
                         <div className="flex items-start justify-between gap-4 flex-wrap">
                             <div>
-                                <p className="text-sm font-bold leading-tight">{item.role}</p>
-                                <p className="text-xs font-mono mt-0.5" style={{ color: "var(--muted)" }}>
+                                <p className="text-base font-bold leading-tight">{item.role}</p>
+                                <p className="text-sm font-mono mt-0.5" style={{ color: "var(--muted)" }}>
                                     {item.company}
                                     {item.location ? ` · ${item.location}` : ""}
                                 </p>
@@ -35,19 +35,19 @@ export default function ExperienceTimeline() {
 
                             <div className="flex items-center gap-2 shrink-0">
                                 {isCurrent && (
-                                    <span className="flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 select-none">
+                                    <span className="flex items-center gap-1.5 text-xs font-mono px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 select-none">
                                         <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                                         Current
                                     </span>
                                 )}
-                                <span className="text-[11px] font-mono select-none" style={{ color: "var(--muted)" }}>
+                                <span className="text-xs font-mono select-none" style={{ color: "var(--muted)" }}>
                                     {item.start} – {item.end ?? "Present"}
                                 </span>
                             </div>
                         </div>
 
                         {/* description */}
-                        <p className="text-xs font-mono mt-3 leading-relaxed opacity-70">
+                        <p className="text-sm font-mono mt-3 leading-relaxed opacity-70">
                             {item.description}
                         </p>
 

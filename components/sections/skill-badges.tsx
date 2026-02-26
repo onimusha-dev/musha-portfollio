@@ -1,46 +1,58 @@
-interface SkillBadgeProps {
-    name: string;
-    image: string;
-    color?: string; // kept for compat — theme accent is used for hover
+interface SkillGroupProps {
+    label: string;
+    items: string[];
 }
 
-const SkillBadge = ({ name, image }: SkillBadgeProps) => (
-    <div
+// ── Individual pill ───────────────────────────────────────────
+const Pill = ({ name }: { name: string }) => (
+    <span
         className="
-            group flex items-center gap-2.5 px-2.5 py-2 rounded-xl
-            cursor-default select-none
-            bg-card border border-card-border
-            transition-all duration-200
-            hover:-translate-y-px hover:border-accent hover:bg-accent/5
-            hover:cursor-pointer
+            inline-flex items-center px-3.5 py-1.5
+            rounded-lg text-sm font-mono select-none cursor-default
+            border transition-all duration-200
+            text-foreground/70
+            hover:-translate-y-px hover:border-accent/60 hover:bg-accent/5 hover:text-accent
         "
+        style={{
+            background: "var(--card)",
+            borderColor: "var(--card-border)",
+        }}
     >
-        {/* icon */}
-        <div className="w-6 h-6 shrink-0 flex items-center justify-center bg-foreground/5 animate-pulse rounded-md">
-            <img
-                src={image}
-                alt={name}
-                width={24}
-                height={24}
-                loading="lazy"
-                draggable={false}
-                className="w-full h-full object-contain"
-            />
+        {name}
+    </span>
+);
+
+// ── Group: label + pills ──────────────────────────────────────
+const SkillGroup = ({ label, items }: SkillGroupProps) => (
+    <div className="flex flex-col gap-3">
+        {/* section label */}
+        <p
+            className="text-sm font-mono tracking-widest uppercase select-none"
+            style={{ color: "var(--muted)" }}
+        >
+            {label}
+        </p>
+
+        {/* pills */}
+        <div className="flex flex-wrap gap-2">
+            {items.map(item => (
+                <Pill key={item} name={item} />
+            ))}
         </div>
-
-        {/* name */}
-        <span className="text-xs font-mono whitespace-nowrap text-foreground/70 group-hover:text-foreground transition-colors duration-200">
-            {name}
-        </span>
     </div>
 );
 
-const SkillBadges = ({ skills }: { skills: SkillBadgeProps[] }) => (
-    <div className="flex flex-wrap gap-2">
-        {skills.map(skill => (
-            <SkillBadge key={skill.name} {...skill} />
-        ))}
-    </div>
-);
+// ── Main export ───────────────────────────────────────────────
+interface SkillGroupsProps {
+    groups: SkillGroupProps[];
+}
 
-export default SkillBadges;
+export default function SkillGroups({ groups }: SkillGroupsProps) {
+    return (
+        <div className="flex flex-col gap-7">
+            {groups.map(group => (
+                <SkillGroup key={group.label} label={group.label} items={group.items} />
+            ))}
+        </div>
+    );
+}

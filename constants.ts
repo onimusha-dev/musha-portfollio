@@ -1,29 +1,17 @@
-// ── Skills ────────────────────────────────────────────────── */
-export const skills = [
-    { name: "Next.js", image: "https://skillicons.dev/icons?i=nextjs", color: "zinc" },
-    { name: "React", image: "https://skillicons.dev/icons?i=react", color: "blue" },
-    { name: "TypeScript", image: "https://skillicons.dev/icons?i=ts", color: "blue" },
-    { name: "Tailwind CSS", image: "https://skillicons.dev/icons?i=tailwind", color: "cyan" },
-    { name: "Node.js", image: "https://skillicons.dev/icons?i=nodejs", color: "green" },
-    { name: "Express.js", image: "https://skillicons.dev/icons?i=express", color: "zinc" },
-    { name: "MongoDB", image: "https://skillicons.dev/icons?i=mongodb", color: "green" },
-    { name: "PostgreSQL", image: "https://skillicons.dev/icons?i=postgres", color: "blue" },
-    { name: "Docker", image: "https://skillicons.dev/icons?i=docker", color: "blue" },
-    { name: "Kubernetes", image: "https://skillicons.dev/icons?i=kubernetes", color: "blue" },
-    { name: "AWS", image: "https://skillicons.dev/icons?i=aws", color: "orange" },
-    { name: "Redis", image: "https://skillicons.dev/icons?i=redis", color: "red" },
-    { name: "Linux", image: "https://skillicons.dev/icons?i=linux", color: "yellow" },
-    { name: "Git", image: "https://skillicons.dev/icons?i=git", color: "orange" },
-]
-
-// ── Languages ─────────────────────────────────────────────── */
-export const languages = [
-    { name: "C", image: "https://skillicons.dev/icons?i=c", color: "blue" },
-    { name: "JavaScript", image: "https://skillicons.dev/icons?i=js", color: "yellow" },
-    { name: "TypeScript", image: "https://skillicons.dev/icons?i=ts", color: "blue" },
-    { name: "Python", image: "https://skillicons.dev/icons?i=py", color: "yellow" },
-    { name: "Rust", image: "https://skillicons.dev/icons?i=rust", color: "orange" },
-    { name: "SQL", image: "https://skillicons.dev/icons?i=postgresql", color: "blue" },
+// ── Skill Groups (categorised, text-pill style) ──────────────── */
+export const skillGroups = [
+    {
+        label: "Languages",
+        items: ["TypeScript", "JavaScript", "Python", "C", "Rust", "SQL"],
+    },
+    {
+        label: "Frameworks",
+        items: ["React", "Next.js", "React Native", "Expo", "Express.js", "Hono"],
+    },
+    {
+        label: "Tools & Infra",
+        items: ["Docker", "Kubernetes", "AWS", "PostgreSQL", "Redis", "MongoDB", "Git", "Linux", "n8n"],
+    },
 ]
 
 // ── Social / Connection links ─────────────────────────────── */
@@ -88,29 +76,28 @@ export const experience = [
 
 // ── Featured Projects ─────────────────────────────────────── */
 export const projects = [
+
     {
-        name: "musha-cli",
-        description: "A developer CLI toolkit written in Rust. Includes scaffolding, git helpers, and one-command deployment shortcuts.",
-        tags: ["Rust", "CLI", "DevOps"],
-        url: "https://github.com/onimusha-dev/musha-cli",
-        stars: 42,
-        wip: false,
+        name: "Chai-Chan",
+        description: "A ai chat bot with multi-scheme theming, GitHub contribution graph, and a blog engine.",
+        tags: ["Node.js", "Redis", "WebSocket"],
+        repoUrl: "https://github.com/onimusha-dev/Chai-Chan",
+        liveUrl: "",
+        stars: 1,
+        wip: true,
+        category: "Backend",
+        image: "/projects/chai-chan.webp",
     },
     {
-        name: "portfolio-v2",
+        name: "portfolio",
         description: "This portfolio — a Next.js app with multi-scheme theming, GitHub contribution graph, and a blog engine.",
         tags: ["Next.js", "TypeScript", "Tailwind"],
-        url: "https://github.com/onimusha-dev/portfolio",
-        stars: 12,
+        repoUrl: "https://github.com/onimusha-dev/portfolio",
+        liveUrl: "https://musha-portfollio.vercel.app/",
+        stars: 1,
         wip: false,
-    },
-    {
-        name: "realtime-notify",
-        description: "A plug-and-play real-time notification service with WebSocket support, built for scalability on top of Redis pub/sub.",
-        tags: ["Node.js", "Redis", "WebSocket"],
-        url: "https://github.com/onimusha-dev/realtime-notify",
-        stars: 8,
-        wip: true,
+        category: "Web App",
+        image: "/projects/portfollio.webp",
     },
 ]
 
@@ -133,5 +120,4 @@ export const GALLERY = [
     { id: 3, src: "https://i.pinimg.com/1200x/8c/1d/24/8c1d246dc322b35302cc1cd44e15a79c.jpg", title: "Portrait I", medium: "Digital", year: "2025" },
     { id: 4, src: "https://i.pinimg.com/736x/bc/56/f2/bc56f25a6c7a99c9a1bbb4cd8f0629f4.jpg", title: "Architecture", medium: "Photo", year: "2024" },
     { id: 5, src: "https://i.pinimg.com/736x/2a/62/49/2a624911a25ad63c4e8e18d66c582b07.jpg", title: "Pimon", medium: "Photo", year: "2025" },
-
 ];

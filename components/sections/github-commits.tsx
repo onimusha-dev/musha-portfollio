@@ -122,14 +122,14 @@ export default function GithubCommits() {
     return (
         <div className="w-full">
             {/* header */}
-            <p className="text-[11px] font-mono tracking-widest uppercase select-none mb-3"
+            <p className="text-xs font-mono tracking-widest uppercase select-none mb-3"
                 style={{ color: "var(--muted)" }}>
                 GitHub Contributions · @{GITHUB_USERNAME}
             </p>
 
             {/* card */}
             <div
-                className="rounded-2xl p-4 w-full overflow-hidden"
+                className="rounded-2xl p-4 w-full"
                 style={{ background: "var(--card)", border: "1px dashed var(--card-border)" }}
             >
                 {/* graph inner — observed for width */}
@@ -221,10 +221,10 @@ export default function GithubCommits() {
 
                             {/* footer */}
                             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mt-3">
-                                <span className="text-[11px] font-mono select-none" style={{ color: "var(--muted)" }}>
+                                <span className="text-xs font-mono select-none" style={{ color: "var(--muted)" }}>
                                     {total.toLocaleString()} contributions in the last year
                                 </span>
-                                <div className="flex items-center gap-1.5 text-[11px] font-mono select-none"
+                                <div className="flex items-center gap-1.5 text-xs font-mono select-none"
                                     style={{ color: "var(--muted)" }}>
                                     <span>Less</span>
                                     {LEGEND_COUNTS.map(c => (

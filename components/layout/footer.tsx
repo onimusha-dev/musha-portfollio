@@ -13,7 +13,7 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="relative mt-24 w-full max-w-6xl mx-auto px-6">
+        <footer className="relative mt-24 w-full max-w-5xl mx-auto sm:px-0">
             {/* gradient fade from page bg into footer */}
             <div className="absolute -top-16 left-0 right-0 h-16 pointer-events-none" />
 
@@ -25,18 +25,18 @@ export default function Footer() {
 
                         {/* Brand */}
                         <div className="col-span-1">
-                            <p className="text-xl font-bold font-mono" style={{ color: "var(--accent)" }}>
+                            <p className="text-2xl font-bold font-mono" style={{ color: "var(--accent)" }}>
                                 鬼 musha
                             </p>
-                            <p className="text-sm font-mono mt-2 leading-relaxed opacity-50">
+                            <p className="text-base font-mono mt-2 leading-relaxed opacity-50">
                                 Self-taught developer building cool stuff from India.
-                                Backend, DevOps & low-level things.
+                                Backend, DevOps &amp; low-level things.
                             </p>
 
                             {/* status dot */}
                             <div className="flex items-center gap-2 mt-4">
                                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                                <span className="text-xs font-mono opacity-50">
+                                <span className="text-sm font-mono opacity-50">
                                     open to opportunities
                                 </span>
                             </div>
@@ -44,7 +44,7 @@ export default function Footer() {
 
                         {/* Pages */}
                         <div>
-                            <p className="text-[10px] font-mono tracking-widest uppercase mb-4 select-none"
+                            <p className="text-xs font-mono tracking-widest uppercase mb-4 select-none"
                                 style={{ color: "var(--muted)" }}>
                                 Pages
                             </p>
@@ -53,7 +53,7 @@ export default function Footer() {
                                     <li key={href}>
                                         <Link
                                             href={href}
-                                            className="text-sm font-mono opacity-50 hover:opacity-100 transition-opacity duration-150 hover:text-accent"
+                                            className="text-base font-mono opacity-50 hover:opacity-100 transition-opacity duration-150 hover:text-accent"
                                         >
                                             {label}
                                         </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
 
                         {/* Connect */}
                         <div>
-                            <p className="text-[10px] font-mono tracking-widest uppercase mb-4 select-none"
+                            <p className="text-xs font-mono tracking-widest uppercase mb-4 select-none"
                                 style={{ color: "var(--muted)" }}>
                                 Connect
                             </p>
@@ -77,7 +77,7 @@ export default function Footer() {
                                                 href={url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="group flex items-center gap-2.5 text-sm font-mono opacity-50 hover:opacity-100 transition-all duration-150"
+                                                className="group flex items-center gap-2.5 text-base font-mono opacity-50 hover:opacity-100 transition-all duration-150"
                                             >
                                                 <span className="group-hover:text-accent transition-colors">
                                                     {Icon && <Icon className="w-4 h-4" />}
@@ -98,11 +98,11 @@ export default function Footer() {
                         className="flex flex-col sm:flex-row items-center justify-between gap-3 mt-10 pt-6"
                         style={{ borderTop: "1px solid var(--card-border)" }}
                     >
-                        <p className="text-[11px] font-mono select-none" style={{ color: "var(--muted)" }}>
+                        <p className="text-xs font-mono select-none" style={{ color: "var(--muted)" }}>
                             © {year} musha · All rights reserved
                         </p>
 
-                        <p className="text-[11px] font-mono select-none" style={{ color: "var(--muted)" }}>
+                        <p className="text-xs font-mono select-none" style={{ color: "var(--muted)" }}>
                             Built with{" "}
                             <span style={{ color: "var(--accent)" }}>Next.js</span>
                             {" · "}TypeScript{" · "}Tailwind CSS

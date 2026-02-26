@@ -31,13 +31,15 @@ export default function ImageWithPlaceholder({
                 <Image
                     {...props}
                     alt={alt}
-                    className={`transition-opacity duration-500 ${isLoading ? "opacity-0" : "opacity-100"
+                    className={`transition-opacity duration-500 select-none ${isLoading ? "opacity-0" : "opacity-100"
                         } ${className}`}
                     onLoad={() => setIsLoading(false)}
                     onError={() => {
                         setIsLoading(false);
                         setIsError(true);
                     }}
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable={false}
                 />
             )}
         </div>

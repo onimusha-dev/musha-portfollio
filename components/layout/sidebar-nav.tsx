@@ -7,7 +7,6 @@ const NAV_ITEMS = [
     { id: "contributions", label: "Contributions" },
     { id: "experience", label: "Experience" },
     { id: "skills", label: "Skills" },
-    { id: "languages", label: "Languages" },
     { id: "projects", label: "Projects" },
 ];
 
@@ -37,7 +36,7 @@ export default function SidebarNav() {
     };
 
     return (
-        <aside className="hidden lg:flex flex-col gap-0.5 sticky top-24 h-fit w-40 shrink-0 select-none">
+        <aside className="hidden lg:flex flex-col gap-0.5 sticky top-20 h-fit w-44 shrink-0 select-none">
             {/* vertical guide line */}
             <div className="absolute left-[7px] top-2 bottom-2 w-px bg-foreground/10 -z-10" />
 
@@ -48,7 +47,7 @@ export default function SidebarNav() {
                         key={id}
                         onClick={() => scrollTo(id)}
                         className={`
-                            flex items-center gap-3 text-left text-sm py-1.5 cursor-pointer
+                            flex items-center gap-3 text-left text-base py-2 cursor-pointer
                             transition-all duration-200
                             ${isActive
                                 ? "text-foreground font-semibold"

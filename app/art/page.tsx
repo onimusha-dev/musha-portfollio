@@ -21,6 +21,7 @@ function GalleryImage({ piece, onClick }: { piece: Piece, onClick: () => void })
     return (
         <div
             className="break-inside-avoid mb-3 group relative overflow-hidden rounded-xl cursor-pointer bg-foreground/5 select-none"
+            onContextMenu={(e) => e.preventDefault()}
             onClick={onClick}
         >
             {isLoading && (
@@ -102,6 +103,7 @@ function Lightbox({
         <div
             className="fixed inset-0 z-100 flex items-center justify-center p-4"
             style={{ background: "rgba(0,0,0,0.92)", backdropFilter: "blur(8px)" }}
+            onContextMenu={(e) => e.preventDefault()}
             onClick={onClose}
         >
             {/* Close */}
@@ -138,7 +140,7 @@ function Lightbox({
 
             {/* Image + caption */}
             <div
-                className="flex flex-col items-center gap-4 max-w-4xl w-full"
+                className="flex flex-col items-center gap-4 max-w-4xl p-10"
                 onClick={e => e.stopPropagation()}
             >
                 <div className="relative w-full flex justify-center">
@@ -148,7 +150,7 @@ function Lightbox({
                     <img
                         src={piece.src}
                         alt={piece.title}
-                        className={`max-h-[78vh] max-w-full object-contain rounded-xl shadow-2xl transition-opacity duration-300 ${isLoading ? "opacity-0 absolute" : "opacity-100"
+                        className={`max-h-[78vh] max-w-full object-contain rounded-xl shadow-2xl transition-opacity duration-300 select-none ${isLoading ? "opacity-0 absolute" : "opacity-100"
                             }`}
                         draggable={false}
                         onLoad={() => setIsLoading(false)}
