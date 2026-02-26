@@ -1,0 +1,12 @@
+          <ImageWithPlaceholder
+            src="/images/banner.png"
+            alt="Banner"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            priority
+            containerClassName="w-full"
+            className="w-full h-auto object-cover select-none"
+            draggable={false}
+          />
