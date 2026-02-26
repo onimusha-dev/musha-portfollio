@@ -38,7 +38,7 @@ export default function Navbar() {
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full relative" style={{ borderBottom: "1px solid var(--card-border)" }}>
+        <header className="sticky top-0 z-50 w-full" style={{ borderBottom: "1px solid var(--card-border)" }}>
             <div className="bg-background/80 backdrop-blur-md">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
 
