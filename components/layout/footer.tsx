@@ -28,9 +28,14 @@ export default function Footer() {
                             <p className="text-2xl font-bold font-mono" style={{ color: "var(--accent)" }}>
                                 鬼 musha
                             </p>
+                            {/* <p className="text-base font-mono mt-2 leading-relaxed opacity-70">
+                                Backend-focused developer from India.
+                                I build systems that are clean, fast, and built to last.
+                                Linux, DevOps, and low-level engineering.
+                            </p> */}
                             <p className="text-base font-mono mt-2 leading-relaxed opacity-70">
-                                Self-taught developer building cool stuff from India.
-                                Backend, DevOps &amp; low-level things.
+                                日本の技術とアニメ文化が好きです。
+                                もっと強い開発者になって、自由を手に入れたい。
                             </p>
 
                             {/* status dot */}
@@ -104,7 +109,7 @@ export default function Footer() {
 
                         <p className="text-sm font-mono select-none" style={{ color: "var(--muted)" }}>
                             Built with{" "}
-                            <span style={{ color: "var(--accent)" }}>Next.js</span>
+                            <span style={{ color: "var(--accent)", cursor: "pointer" }}>Next.js</span>
                             {" · "}TypeScript{" · "}Tailwind CSS
                         </p>
                     </div>

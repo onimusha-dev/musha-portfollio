@@ -28,13 +28,13 @@ function GalleryImage({ piece, onClick }: { piece: Piece; onClick: () => void })
 
     return (
         <div
-            className="break-inside-avoid mb-3 group relative overflow-hidden rounded-xl cursor-pointer bg-foreground/5 select-none"
+            className="break-inside-avoid mb-3 group relative overflow-hidden rounded-xl cursor-pointer bg-foreground/5 select-none min-h-[120px]"
             onContextMenu={(e) => e.preventDefault()}
             onClick={onClick}
         >
-            {/* Wait to remove skeleton until not loading. If image has no height yet, give skeleton min-h block */}
+            {/* Wait to remove skeleton until not loading. */}
             {isLoading && (
-                <div className="absolute inset-0 z-10 w-full h-full min-h-[250px] animate-pulse bg-foreground/5 rounded-xl" />
+                <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-foreground/5 rounded-xl" />
             )}
 
             {!isError ? (
@@ -44,12 +44,12 @@ function GalleryImage({ piece, onClick }: { piece: Piece; onClick: () => void })
                     alt={piece.title}
                     loading="lazy"
                     draggable={false}
-                    className={`w-full object-cover transition-all duration-500 min-h-[250px] group-hover:scale-[1.04] ${isLoading ? "opacity-0" : "opacity-100 h-auto"}`}
+                    className={`w-full object-cover transition-all duration-500 group-hover:scale-[1.04] ${isLoading ? "opacity-0" : "opacity-100 h-auto"}`}
                     onLoad={() => setIsLoading(false)}
                     onError={() => { setIsLoading(false); setIsError(true); }}
                 />
             ) : (
-                <div className="w-full h-[250px] flex items-center justify-center text-foreground/20 italic text-xs">
+                <div className="w-full min-h-[120px] flex items-center justify-center text-foreground/20 italic text-xs">
                     Failed to load
                 </div>
             )}

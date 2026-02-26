@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllSlugs, getPostBySlug } from "@/content/blogs";
 import "../blog.css";
+import StickyTopbar from "./sticky-topbar";
 
 /* ── Configure marked (server-side only) ─────────────────── */
 marked.setOptions({ gfm: true, breaks: false });
@@ -143,37 +144,8 @@ export default async function BlogPostPage({
 
     return (
         <div className="blog-post-page">
-            {/* ── Sticky top bar ── */}
-            <div className="blog-topbar">
-                <Link
-                    href="/blog"
-                    className="blog-back-btn flex items-center gap-1.5 font-mono text-sm"
-                    style={{ color: "var(--muted)" }}
-                    aria-label="Back to blog"
-                >
-                    <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                    >
-                        <path d="M19 12H5M12 5l-7 7 7 7" />
-                    </svg>
-                    <span>blog</span>
-                </Link>
-
-                <span
-                    className="blog-topbar-title"
-                    aria-hidden="true"
-                >
-                    {post.title}
-                </span>
-            </div>
+            {/* ── Sticky top bar (Client Component for scroll behavior) ── */}
+            <StickyTopbar title={post.title} />
 
             {/* ── Scrollable content with streaming ── */}
             <div className="blog-post-scroll">

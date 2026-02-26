@@ -171,7 +171,7 @@ export default function Home() {
             <div className="mb-2">
               <h1 className="text-3xl font-bold select-none leading-tight">鬼 musha</h1>
               <p className="text-base font-mono opacity-75 cursor-text mt-0.5">
-                20 · self taught · developer · artist
+                20 · self taught · developer 
               </p>
             </div>
           </div>
@@ -188,17 +188,20 @@ export default function Home() {
               {/* ── Bio, tags, socials ─────────────────────── */}
               <section id="hero" className="scroll-mt-24">
                 <p className="text-lg font-mono opacity-80 leading-relaxed max-w-2xl">
-                  I&apos;m a 20 year old self-taught developer and student who likes to make cool stuff.
-                  I have a lot of experience in web development and I&apos;m always learning new things.
-                  More interested in low-level programming and backend development.
+                  Self-taught developer obsessed with understanding how systems actually work.
+                  I spend most of my time around backend code, Linux environments, and building tools that solve real problems.
+                  I value clarity over cleverness, performance over hype, and shipping over endless planning.
+                  <br /> <br />
+                  <strong>Outside of code:</strong> reading, gaming, and studying Japanese.
                 </p>
 
                 {/* role tags */}
                 <div className="flex flex-wrap gap-2 mt-5">
-                  <div className="bg-red-500/10    text-red-400    rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-red-500/20">Backend</div>
-                  <div className="bg-green-500/10  text-green-400  rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-green-500/20">Cloud Architect</div>
-                  <div className="bg-blue-500/10   text-blue-400   rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-blue-500/20">DevOps</div>
-                  <div className="bg-yellow-500/10 text-yellow-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-yellow-500/20">Security</div>
+                  <div className="bg-purple-500/10 text-purple-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-purple-500/20">Low Level</div>
+                  <div className="bg-red-500/10    text-red-400    rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-red-500/20">Devops</div>
+                  <div className="bg-blue-500/10   text-blue-400   rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-blue-500/20">Backend</div>
+                  <div className="bg-yellow-500/10 text-yellow-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-yellow-500/20">Android</div>
+                  <div className="bg-green-500/10  text-green-400  rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-green-500/20">日本語</div>
                 </div>
               </section>
 

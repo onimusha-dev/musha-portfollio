@@ -2,15 +2,15 @@
 export const skillGroups = [
     {
         label: "Languages",
-        items: ["TypeScript", "JavaScript", "Python", "C", "Rust", "SQL"],
+        items: ["C", "JavaScript", "TypeScript", "Python", "Dart", "SQL"],
     },
     {
         label: "Frameworks",
-        items: ["React", "Next.js", "React Native", "Expo", "Express.js", "Hono"],
+        items: ["Flutter", "React", "Next.js", "shadcn/ui", "Tailwind CSS"],
     },
     {
         label: "Tools & Infra",
-        items: ["Docker", "Kubernetes", "AWS", "PostgreSQL", "Redis", "MongoDB", "Git", "Linux", "n8n"],
+        items: ["Docker", "PostgreSQL", "Git", "Linux"],
     },
 ]
 
@@ -46,41 +46,25 @@ export const socials = [
 // ── Experience ────────────────────────────────────────────── */
 export const experience = [
     {
-        role: "Software Engineer Intern",
-        company: "Acme Corp",
+        role: "Software Developer Intern",
+        company: "Neocap",
         location: "Remote",
-        start: "Jun 2024",
-        end: null,           // null = current/present
-        description: "Building and maintaining full-stack product features using Next.js and Node.js. Shipped a real-time notification system now serving 50k+ users.",
-        tags: ["Next.js", "Node.js", "PostgreSQL", "Redis"],
-    },
-    {
-        role: "Backend Developer Intern",
-        company: "TechStartup",
-        location: "Remote",
-        start: "Jan 2024",
-        end: "May 2024",
-        description: "Designed and documented REST APIs, optimised slow database queries, and built caching layers that cut average response time by 40%.",
-        tags: ["Express.js", "MongoDB", "Docker"],
-    },
-    {
-        role: "Open Source Contributor",
-        company: "Various",
-        location: "GitHub",
-        start: "2023",
-        end: "Present",
-        description: "Regular contributions to developer tooling projects. Merged PRs in ecosystem packages reaching 1M+ weekly downloads.",
-        tags: ["TypeScript", "Rust", "Open Source"],
-    },
-]
+        start: "Sep 2025",
+        end: "Dec 2025",
+        description: `Developed and maintained full-stack features using Node.js and React.js, enhancing team productivity and user experience. Designed and implemented an internal dashboard to streamline team management, improving operational efficiency.`,
+        tags: ["React.js", "Node.js", "shadcn/ui", "Tailwind CSS"],
+    }
+];
 
 // ── Featured Projects ─────────────────────────────────────── */
 export const projects = [
-
     {
         name: "Chai-Chan",
-        description: "A ai chat bot with multi-scheme theming, GitHub contribution graph, and a blog engine.",
-        tags: ["Node.js", "Redis", "WebSocket"],
+        description: `
+      A GPT-style AI chatbot powered by Ollama local models, featuring MongoDB-backed persistent storage, 
+      user-based authentication, and secure token visualization. making it a fully-featured, self-hosted AI chat platform.
+    `,
+        tags: ["Node.js", "MongoDB", "React", "shadcn/ui"],
         repoUrl: "https://github.com/onimusha-dev/Chai-Chan",
         liveUrl: "",
         stars: 1,
@@ -89,26 +73,45 @@ export const projects = [
         image: "/projects/chai-chan.webp",
     },
     {
-        name: "portfolio",
-        description: "This portfolio — a Next.js app with multi-scheme theming, GitHub contribution graph, and a blog engine.",
-        tags: ["Next.js", "TypeScript", "Tailwind"],
+        name: "Task Manager",
+        description: `
+      A task manager built with Flutter and Firebase, featuring task management, 
+      user-based authentication, and real-time updates. 
+      Supports multi-scheme theming, offline backup, Notification system, task sharing, and more. 
+    `,
+        tags: ["Flutter", "Firebase", "Dart"],
+        repoUrl: "https://github.com/onimusha-dev/task-manager",
+        liveUrl: "https://github.com/onimusha-dev/simple-task-manager-app",
+        stars: 1,
+        wip: true,
+        category: "Mobile App",
+        image: "/projects/any_task.webp",
+    },
+    {
+        name: "Portfolio",
+        description: `
+      This personal portfolio built with Next.js showcases multi-scheme theming, 
+      a live GitHub contribution graph, and a blog engine. Fully typed with TypeScript 
+      and styled using Tailwind CSS for a modern, responsive UI.
+    `,
+        tags: ["Next.js", "TypeScript", "Tailwind CSS"],
         repoUrl: "https://github.com/onimusha-dev/portfolio",
         liveUrl: "https://musha.vercel.app/",
         stars: 1,
         wip: false,
         category: "Web App",
-        image: "/projects/portfollio.webp",
-    },
-]
+        image: "/projects/portfolio.webp",
+    }
+];
 
 // ── Education ─────────────────────────────────────────────── */
 export const education = [
     {
-        degree: "B.Tech Computer Science",
-        school: "Demo University",
+        degree: "BCA",
+        school: "",
         location: "India",
-        start: "2022",
-        end: "2026",
+        start: "2025",
+        end: "2028",
         current: true,
     },
 ]
@@ -116,14 +119,50 @@ export const education = [
 /* ── Demo gallery data (replace src with real art paths later) ── */
 export const GALLERY = [
     {
+        src: "/art/golden_elf_sketch.webp",
+        title: "Golden Elf Sketch",
+        medium: "Digital Art",
+        year: "2026",
+    },
+    {
+        src: "/art/nazuna_chan.png",
+        title: "Nazuna Chan",
+        medium: "Digital Art",
+        year: "2026",
+    },
+    {
         src: "/art/sleepy_girl.webp",
         title: "Sleepy Girl",
         medium: "Digital Art",
         year: "2026",
     },
     {
-        src: "/art/golden_elf_sketch.webp",
-        title: "Golden Elf Sketch",
+        src: "/art/Silent_Watcher_Behind_the_Mask.png",
+        title: "Silent Watcher Behind the Mask",
+        medium: "Digital Art",
+        year: "2026",
+    },
+    {
+        src: "/art/girl.png",
+        title: "A Girl",
+        medium: "Photography",
+        year: "2026",
+    },
+    {
+        src: "/art/image.png",
+        title: "image",
+        medium: "Digital Art",
+        year: "2026",
+    },
+    {
+        src: "https://i.pinimg.com/736x/ac/2b/53/ac2b5393d88d00d823b362ba5050e882.jpg",
+        title: "Cat Girl",
+        medium: "Digital Art",
+        year: "2026",
+    },
+    {
+        src: "https://i.pinimg.com/1200x/b5/17/55/b51755ce08aa1dbf5b834710ce56f855.jpg",
+        title: "Cat Girl",
         medium: "Digital Art",
         year: "2026",
     }

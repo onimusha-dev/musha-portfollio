@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: "20 year old self-taught developer.",
     type: "website",
   },
+  icons: {
+    icon: "/images/favicon_io/favicon.ico",
+  },
 };
 
 export default function RootLayout({
