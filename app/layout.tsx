@@ -56,10 +56,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${caveat.variable} antialiased`}>
+      <body className={`${inter.variable} ${caveat.variable} antialiased min-h-screen flex flex-col overflow-x-hidden`}>
         <ThemeProvider>
           <Navbar />
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

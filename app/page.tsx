@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* Avatar + name — peeks below banner */}
         <div className="flex gap-4 items-end -mt-12 pl-2">
-          <div className="w-32 h-32 bg-neutral-300 dark:bg-neutral-800 rounded-full overflow-hidden border-4 border-background shrink-0 relative backdrop-blur-3xl">
+          <div className="w-24 h-24 md:w-32 md:h-32 bg-neutral-300 dark:bg-neutral-800 rounded-full overflow-hidden border-4 border-background shrink-0 relative backdrop-blur-3xl">
             <ImageWithPlaceholder
               src="/images/logo.png"
               alt="musha avatar"

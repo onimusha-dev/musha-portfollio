@@ -220,7 +220,7 @@ export default function GithubCommits() {
                             </div>
 
                             {/* footer */}
-                            <div className="flex items-center justify-between mt-3">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mt-3">
                                 <span className="text-[11px] font-mono select-none" style={{ color: "var(--muted)" }}>
                                     {total.toLocaleString()} contributions in the last year
                                 </span>

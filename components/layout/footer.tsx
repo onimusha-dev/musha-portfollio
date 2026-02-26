@@ -13,9 +13,9 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="relative mt-24 w-6xl mx-auto">
+        <footer className="relative mt-24 w-full max-w-6xl mx-auto px-6">
             {/* gradient fade from page bg into footer */}
-            <div className="absolute -top-16 left-0 right-0 h-16 pointer-events-none"/>
+            <div className="absolute -top-16 left-0 right-0 h-16 pointer-events-none" />
 
             <div className="rounded-t-2xl" style={{ background: "var(--card)", borderTop: "1px solid var(--card-border)" }}>
                 <div className="max-w-5xl mx-auto px-6 py-12">

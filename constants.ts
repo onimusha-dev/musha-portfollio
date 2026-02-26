@@ -128,16 +128,10 @@ export const education = [
 
 /* ── Demo gallery data (replace src with real art paths later) ── */
 export const GALLERY = [
-    { id: 1, src: "https://picsum.photos/seed/musha-a/600/900", title: "Abstract I", medium: "Digital", year: "2025" },
-    { id: 2, src: "https://picsum.photos/seed/musha-b/800/533", title: "Landscape Study", medium: "Sketch", year: "2024" },
-    { id: 3, src: "https://picsum.photos/seed/musha-c/600/750", title: "Portrait I", medium: "Digital", year: "2025" },
-    { id: 4, src: "https://picsum.photos/seed/musha-d/800/600", title: "Architecture", medium: "Photo", year: "2024" },
-    { id: 5, src: "https://picsum.photos/seed/musha-e/600/800", title: "Dark Study", medium: "Digital", year: "2025" },
-    { id: 6, src: "https://picsum.photos/seed/musha-f/700/700", title: "Symmetry", medium: "Generative", year: "2024" },
-    { id: 7, src: "https://picsum.photos/seed/musha-g/800/500", title: "Motion", medium: "Photo", year: "2025" },
-    { id: 8, src: "https://picsum.photos/seed/musha-h/500/750", title: "Figures", medium: "Sketch", year: "2023" },
-    { id: 9, src: "https://picsum.photos/seed/musha-i/800/600", title: "Composition", medium: "Digital", year: "2025" },
-    { id: 10, src: "https://picsum.photos/seed/musha-j/600/900", title: "Shadow Play", medium: "Photo", year: "2024" },
-    { id: 11, src: "https://picsum.photos/seed/musha-k/700/467", title: "Urban Texture", medium: "Mixed", year: "2023" },
-    { id: 12, src: "https://picsum.photos/seed/musha-l/600/800", title: "Abstract II", medium: "Digital", year: "2024" },
+    { id: 1, src: "https://i.pinimg.com/736x/0b/a2/9d/0ba29d40e5a35c036ce14e765fc6dde8.jpg", title: "Abstract I", medium: "Digital", year: "2025" },
+    { id: 2, src: "https://i.pinimg.com/736x/06/5c/ac/065cacf99f4c19c42eb2b622d252fb25.jpg", title: "Landscape Study", medium: "Sketch", year: "2024" },
+    { id: 3, src: "https://i.pinimg.com/1200x/8c/1d/24/8c1d246dc322b35302cc1cd44e15a79c.jpg", title: "Portrait I", medium: "Digital", year: "2025" },
+    { id: 4, src: "https://i.pinimg.com/736x/bc/56/f2/bc56f25a6c7a99c9a1bbb4cd8f0629f4.jpg", title: "Architecture", medium: "Photo", year: "2024" },
+    { id: 5, src: "https://i.pinimg.com/736x/2a/62/49/2a624911a25ad63c4e8e18d66c582b07.jpg", title: "Pimon", medium: "Photo", year: "2025" },
+
 ];
