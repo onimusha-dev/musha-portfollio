@@ -15,5 +15,14 @@ export interface BlogPost {
 }
 
 // ── Posts registry ────────────────────────────────────────────
-// To add a new post: create posts/<slug>.ts and add it here.
+// To add a new post: create a new BlogPost object in posts.ts and add it here.
 export const posts: BlogPost[] = [post1, post2, post3];
+
+// ── Helpers ───────────────────────────────────────────────────
+export function getPostBySlug(slug: string): BlogPost | undefined {
+    return posts.find((p) => p.slug === slug);
+}
+
+export function getAllSlugs(): string[] {
+    return posts.map((p) => p.slug);
+}
