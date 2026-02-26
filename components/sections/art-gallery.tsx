@@ -1,12 +1,11 @@
 "use client";
 
 import { GALLERY } from "@/app/constants";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import Skeleton from "@/components/ui/skeleton";
 import { Icons } from "@/components/ui/icons";
 
 interface Piece {
-    id: number;
     src: string;
     title: string;
     medium: string;
@@ -17,6 +16,15 @@ interface Piece {
 function GalleryImage({ piece, onClick }: { piece: Piece; onClick: () => void }) {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
+    const imgRef = useRef<HTMLImageElement>(null);
+
+    // If the image is already in browser cache, it might not fire the onLoad event
+    // after React attaches the event listener. Check it manually on mount.
+    useEffect(() => {
+        if (imgRef.current?.complete && imgRef.current.naturalHeight > 0) {
+            setIsLoading(false);
+        }
+    }, [piece.src]);
 
     return (
         <div
@@ -24,21 +32,24 @@ function GalleryImage({ piece, onClick }: { piece: Piece; onClick: () => void })
             onContextMenu={(e) => e.preventDefault()}
             onClick={onClick}
         >
-            {isLoading && <Skeleton className="w-full aspect-3/4 rounded-none" />}
+            {/* Wait to remove skeleton until not loading. If image has no height yet, give skeleton min-h block */}
+            {isLoading && (
+                <div className="absolute inset-0 z-10 w-full h-full min-h-[250px] animate-pulse bg-foreground/5 rounded-xl" />
+            )}
 
             {!isError ? (
                 <img
+                    ref={imgRef}
                     src={piece.src}
                     alt={piece.title}
                     loading="lazy"
                     draggable={false}
-                    className={`w-full object-cover transition-all duration-500 group-hover:scale-[1.04] ${isLoading ? "opacity-0 h-0" : "opacity-100 h-auto"
-                        }`}
+                    className={`w-full object-cover transition-all duration-500 min-h-[250px] group-hover:scale-[1.04] ${isLoading ? "opacity-0" : "opacity-100 h-auto"}`}
                     onLoad={() => setIsLoading(false)}
                     onError={() => { setIsLoading(false); setIsError(true); }}
                 />
             ) : (
-                <div className="w-full aspect-square flex items-center justify-center text-foreground/20 italic text-xs">
+                <div className="w-full h-[250px] flex items-center justify-center text-foreground/20 italic text-xs">
                     Failed to load
                 </div>
             )}
@@ -66,8 +77,14 @@ function Lightbox({
     onClose: () => void; onPrev: () => void; onNext: () => void;
 }) {
     const [isLoading, setIsLoading] = useState(true);
+    const imgRef = useRef<HTMLImageElement>(null);
 
-    useEffect(() => { setIsLoading(true); }, [piece.src]);
+    useEffect(() => {
+        setIsLoading(true);
+        if (imgRef.current?.complete && imgRef.current.naturalHeight > 0) {
+            setIsLoading(false);
+        }
+    }, [piece.src]);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -123,12 +140,12 @@ function Lightbox({
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="relative w-full flex justify-center">
-                    {isLoading && <Skeleton className="w-full max-w-lg aspect-3/4 rounded-xl" />}
+                    {isLoading && <div className="absolute inset-0 w-full max-w-lg aspect-3/4 animate-pulse bg-foreground/5 rounded-xl m-auto" />}
                     <img
+                        ref={imgRef}
                         src={piece.src}
                         alt={piece.title}
-                        className={`max-h-[78vh] max-w-full object-contain rounded-xl shadow-2xl transition-opacity duration-300 select-none ${isLoading ? "opacity-0 absolute" : "opacity-100"
-                            }`}
+                        className={`max-h-[78vh] max-w-full object-contain rounded-xl shadow-2xl transition-opacity duration-300 select-none ${isLoading ? "opacity-0 invisible" : "opacity-100"}`}
                         draggable={false}
                         onLoad={() => setIsLoading(false)}
                     />
@@ -164,7 +181,7 @@ export default function ArtGallery() {
             {/* Masonry grid via CSS columns */}
             <div className="columns-2 sm:columns-3 lg:columns-4 gap-3">
                 {GALLERY.map((piece, i) => (
-                    <GalleryImage key={piece.id} piece={piece} onClick={() => open(i)} />
+                    <GalleryImage key={i} piece={piece} onClick={() => open(i)} />
                 ))}
             </div>
 

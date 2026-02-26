@@ -4,7 +4,16 @@ const showDevTools = process.env.NEXT_PUBLIC_DEV_TOOLS === "true";
 
 const nextConfig: NextConfig = {
   devIndicators: showDevTools ? {} : false,
+
+  /* ── Keep server-only packages out of client bundles ───────── */
+  serverExternalPackages: ["marked"],
+
+  /* ── Compression — let Vercel/CDN handle brotli ────────────── */
+  compress: true,
+
   images: {
+    /* Next/Image optimisation — use modern formats */
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
@@ -32,5 +41,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
-

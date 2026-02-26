@@ -115,10 +115,16 @@ export const education = [
 
 /* ── Demo gallery data (replace src with real art paths later) ── */
 export const GALLERY = [
-    { id: 1, src: "https://i.pinimg.com/736x/0b/a2/9d/0ba29d40e5a35c036ce14e765fc6dde8.jpg", title: "Abstract I", medium: "Digital", year: "2025" },
-    { id: 2, src: "https://i.pinimg.com/736x/06/5c/ac/065cacf99f4c19c42eb2b622d252fb25.jpg", title: "Landscape Study", medium: "Sketch", year: "2024" },
-    { id: 3, src: "https://i.pinimg.com/1200x/8c/1d/24/8c1d246dc322b35302cc1cd44e15a79c.jpg", title: "Portrait I", medium: "Digital", year: "2025" },
-    { id: 4, src: "https://i.pinimg.com/736x/bc/56/f2/bc56f25a6c7a99c9a1bbb4cd8f0629f4.jpg", title: "Architecture", medium: "Photo", year: "2024" },
-    { id: 5, src: "https://i.pinimg.com/736x/2a/62/49/2a624911a25ad63c4e8e18d66c582b07.jpg", title: "Pimon", medium: "Photo", year: "2025" },
-    { id: 6, src: 'https://i.pinimg.com/1200x/02/68/2c/02682ccf591ddb8b1a9f5f0944b04fbc.jpg', title: "Portrait II", medium: "Digital", year: "2025" }
-];
+    {
+        src: "/art/sleepy_girl.webp",
+        title: "Sleepy Girl",
+        medium: "Digital Art",
+        year: "2026",
+    },
+    {
+        src: "/art/golden_elf_sketch.webp",
+        title: "Golden Elf Sketch",
+        medium: "Digital Art",
+        year: "2026",
+    }
+]

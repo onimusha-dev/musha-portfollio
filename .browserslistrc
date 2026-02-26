@@ -1,0 +1,8 @@
+# Only target modern browsers — eliminates large polyfill bundles
+# All modern browsers support ES2020+ natively
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+not dead
+not op_mini all

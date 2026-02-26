@@ -3,28 +3,16 @@ import dynamic from "next/dynamic";
 
 import ImageWithPlaceholder from "@/components/ui/image-with-placeholder";
 import SidebarNav from "@/components/layout/sidebar-nav";
+import ExperienceTimeline from "@/components/sections/experience-timeline";
+import FeaturedProjects from "@/components/sections/featured-projects";
+import SkillGroups from "@/components/sections/skill-badges";
 import { skillGroups } from "@/app/constants";
 import Footer from "@/components/layout/footer";
 
-/* ── Lazy-loaded section components ──────────────────────────── */
+/* ── Lazy-loaded client component (only one that ships JS) ── */
 const GithubCommits = dynamic(
   () => import("@/components/sections/github-commits"),
   { loading: () => <CommitsSkeleton /> }
-);
-
-const FeaturedProjects = dynamic(
-  () => import("@/components/sections/featured-projects"),
-  { loading: () => <ProjectsSkeleton /> }
-);
-
-const ExperienceTimeline = dynamic(
-  () => import("@/components/sections/experience-timeline"),
-  { loading: () => <ExperienceSkeleton /> }
-);
-
-const SkillGroups = dynamic(
-  () => import("@/components/sections/skill-badges"),
-  { loading: () => <SkillsSkeleton /> }
 );
 
 /* ── Section skeletons ───────────────────────────────────────── */
