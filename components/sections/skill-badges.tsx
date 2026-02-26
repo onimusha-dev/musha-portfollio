@@ -10,7 +10,7 @@ const Pill = ({ name }: { name: string }) => (
             inline-flex items-center px-3.5 py-1.5
             rounded-lg text-sm font-mono select-none cursor-default
             border transition-all duration-200
-            text-foreground/70
+            text-foreground/80
             hover:-translate-y-px hover:border-accent/60 hover:bg-accent/5 hover:text-accent
         "
         style={{

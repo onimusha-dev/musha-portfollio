@@ -16,7 +16,7 @@ function EmptyState() {
                 <span className="font-mono" style={{ color: "var(--accent)" }}>_</span>
             </div>
             <p className="text-lg font-bold mb-2">Nothing here yet</p>
-            <p className="text-base font-mono opacity-40 max-w-xs leading-relaxed">
+            <p className="text-base font-mono opacity-65 max-w-xs leading-relaxed">
                 Projects are being built in the dark. Check back soon or watch GitHub for updates.
             </p>
             <a
@@ -75,12 +75,12 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             {/* top-right badges */}
             <div className="absolute top-3 right-3 flex items-center gap-2">
                 {project.wip && (
-                    <span className="text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full select-none bg-yellow-500/90 text-yellow-950">
+                    <span className="text-sm font-mono font-semibold px-2.5 py-0.5 rounded-full select-none bg-yellow-500/90 text-yellow-950">
                         WIP
                     </span>
                 )}
                 <span
-                    className="text-xs font-mono px-2.5 py-0.5 rounded-full select-none"
+                    className="text-sm font-mono px-2.5 py-0.5 rounded-full select-none"
                     style={{ background: "var(--accent)", color: "var(--card)" }}
                 >
                     {project.category}
@@ -134,7 +134,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                 </p>
 
                 {/* description */}
-                <p className="text-sm font-mono leading-relaxed flex-1 opacity-60 mb-4">
+                <p className="text-sm font-mono leading-relaxed flex-1 opacity-75 mb-4">
                     {project.description}
                 </p>
 
@@ -143,7 +143,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                     {project.tags.map(tag => (
                         <span
                             key={tag}
-                            className="text-xs font-mono px-2.5 py-0.5 rounded-full select-none"
+                            className="text-sm font-mono px-2.5 py-0.5 rounded-full select-none"
                             style={{ background: "var(--c0)", color: "var(--muted)" }}
                         >
                             {tag}
@@ -214,20 +214,20 @@ export default function ProjectsPage() {
             {/* ── Header ── */}
             <div className="mb-10">
                 {/* breadcrumb */}
-                <div className="flex items-center gap-2 text-sm font-mono opacity-40 mb-4">
-                    <Link href="/" className="hover:opacity-70 transition-opacity">home</Link>
-                    <span>/</span>
-                    <span>projects</span>
+                <div className="flex items-center gap-2 text-sm font-mono mb-4">
+                    <Link href="/" className="opacity-65 hover:opacity-90 transition-opacity">home</Link>
+                    <span className="opacity-65">/</span>
+                    <span className="opacity-65">projects</span>
                 </div>
 
                 <h1 className="text-4xl font-bold mb-2">Projects</h1>
-                <p className="text-base font-mono opacity-50">
+                <p className="text-base font-mono opacity-70">
                     Things I&apos;ve built — tools, services, experiments.
                 </p>
 
                 {/* stats row */}
                 <div className="flex items-center gap-6 mt-5">
-                    <div className="flex items-center gap-1.5 text-sm font-mono opacity-60">
+                    <div className="flex items-center gap-1.5 text-sm font-mono opacity-75">
                         <span className="w-2 h-2 rounded-full" style={{ background: "var(--accent)" }} />
                         {projects.length} project{projects.length !== 1 ? "s" : ""}
                     </div>
@@ -236,7 +236,7 @@ export default function ProjectsPage() {
                         {projects.reduce((acc, p) => acc + p.stars, 0)} total stars
                     </div>
                     {projects.some(p => p.wip) && (
-                        <div className="flex items-center gap-1.5 text-sm font-mono opacity-60">
+                        <div className="flex items-center gap-1.5 text-sm font-mono opacity-75">
                             <span className="w-2 h-2 rounded-full bg-yellow-400" />
                             {projects.filter(p => p.wip).length} in progress
                         </div>
@@ -268,7 +268,7 @@ export default function ProjectsPage() {
             {hasProjects && (
                 <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-4 pt-8"
                     style={{ borderTop: "1px solid var(--card-border)" }}>
-                    <p className="text-base font-mono opacity-40">
+                    <p className="text-base font-mono opacity-65">
                         More open-source work on GitHub →
                     </p>
                     <a

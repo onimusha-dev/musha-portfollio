@@ -37,9 +37,9 @@ export default function ArtPage() {
             {/* Header — rendered immediately, no waiting */}
             <div className="mb-8">
                 <h1 className="text-3xl sm:text-4xl font-bold">Art Gallery</h1>
-                <p className="text-sm font-mono mt-1" style={{ color: "var(--muted)" }}>
+                <p className="text-base font-mono mt-1" style={{ color: "var(--muted)" }}>
                     digital art · sketches · experiments ·{" "}
-                    <span className="opacity-60">{GALLERY.length} pieces</span>
+                    <span>{GALLERY.length} pieces</span>
                 </p>
             </div>
 

@@ -2,7 +2,7 @@ import { experience } from "@/app/constants";
 
 function Tag({ label }: { label: string }) {
     return (
-        <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20 select-none cursor-pointer">
+        <span className="text-sm font-mono px-2.5 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20 select-none cursor-pointer">
             {label}
         </span>
     );
@@ -35,19 +35,19 @@ export default function ExperienceTimeline() {
 
                             <div className="flex items-center gap-2 shrink-0">
                                 {isCurrent && (
-                                    <span className="flex items-center gap-1.5 text-xs font-mono px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 select-none">
+                                    <span className="flex items-center gap-1.5 text-sm font-mono px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 select-none">
                                         <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                                         Current
                                     </span>
                                 )}
-                                <span className="text-xs font-mono select-none" style={{ color: "var(--muted)" }}>
+                                <span className="text-sm font-mono select-none" style={{ color: "var(--muted)" }}>
                                     {item.start} – {item.end ?? "Present"}
                                 </span>
                             </div>
                         </div>
 
                         {/* description */}
-                        <p className="text-sm font-mono mt-3 leading-relaxed opacity-70">
+                        <p className="text-sm font-mono mt-3 leading-relaxed opacity-80">
                             {item.description}
                         </p>
 

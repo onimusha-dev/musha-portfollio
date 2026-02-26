@@ -59,7 +59,7 @@ async function ArticleBody({ slug }: { slug: string }) {
                     {post.tags.map((tag) => (
                         <span
                             key={tag}
-                            className="text-xs font-mono px-2.5 py-0.5 rounded-full select-none"
+                            className="text-sm font-mono px-2.5 py-0.5 rounded-full select-none"
                             style={{
                                 background: "color-mix(in srgb, var(--accent) 12%, transparent)",
                                 color: "var(--accent)",

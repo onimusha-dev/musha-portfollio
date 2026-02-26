@@ -17,18 +17,18 @@ export default function FeaturedProjects() {
                         </p>
                         <div className="flex items-center gap-2 shrink-0">
                             {project.wip && (
-                                <span className="text-xs font-mono px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 select-none">
+                                <span className="text-sm font-mono px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 select-none">
                                     WIP
                                 </span>
                             )}
-                            <span className="flex items-center gap-1 text-sm font-mono opacity-60">
+                            <span className="flex items-center gap-1 text-sm font-mono opacity-75">
                                 <Icons.Star className="w-4 h-4" /> {project.stars}
                             </span>
                         </div>
                     </div>
 
                     {/* description */}
-                    <p className="text-sm font-mono leading-relaxed opacity-60 flex-1 mb-4">
+                    <p className="text-sm font-mono leading-relaxed opacity-75 flex-1 mb-4">
                         {project.description}
                     </p>
 
@@ -37,7 +37,7 @@ export default function FeaturedProjects() {
                         {project.tags.map(tag => (
                             <span
                                 key={tag}
-                                className="text-xs font-mono px-2.5 py-0.5 rounded-full select-none"
+                                className="text-sm font-mono px-2.5 py-0.5 rounded-full select-none"
                                 style={{ background: "var(--c0)", color: "var(--muted)" }}
                             >
                                 {tag}

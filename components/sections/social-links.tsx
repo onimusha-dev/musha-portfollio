@@ -16,13 +16,13 @@ export default function SocialLinks() {
                         className="
                             group flex items-center gap-2 px-3 py-1.5 rounded-xl
                             bg-card border border-card-border
-                            text-foreground/60 hover:text-foreground
+                            text-foreground/75 hover:text-foreground
                             hover:border-accent hover:bg-accent/5
                             transition-all duration-200 hover:-translate-y-px
-                            text-xs font-mono select-none
+                            text-sm font-mono select-none
                         "
                     >
-                        <span className="text-foreground/40 group-hover:text-accent transition-colors duration-200 flex items-center justify-center">
+                        <span className="text-foreground/60 group-hover:text-accent transition-colors duration-200 flex items-center justify-center">
                             {Icon ? <Icon className="w-4 h-4" /> : null}
                         </span>
                         {handle}
