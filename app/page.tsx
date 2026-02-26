@@ -6,6 +6,7 @@ import SidebarNav from "@/components/layout/sidebar-nav";
 import ExperienceTimeline from "@/components/sections/experience-timeline";
 import FeaturedProjects from "@/components/sections/featured-projects";
 import SkillGroups from "@/components/sections/skill-badges";
+import RecentBlogs, { RecentBlogsSkeleton } from "@/components/sections/recent-blogs";
 import { skillGroups } from "@/app/constants";
 import Footer from "@/components/layout/footer";
 
@@ -171,7 +172,7 @@ export default function Home() {
             <div className="mb-2">
               <h1 className="text-3xl font-bold select-none leading-tight">鬼 musha</h1>
               <p className="text-base font-mono opacity-75 cursor-text mt-0.5">
-                20 · self taught · developer 
+                20 · self taught · developer
               </p>
             </div>
           </div>
@@ -226,6 +227,22 @@ export default function Home() {
                 <p className="text-2xl font-bold select-none mb-6">Skills</p>
                 <Suspense fallback={<SkillsSkeleton />}>
                   <SkillGroups groups={skillGroups} />
+                </Suspense>
+              </section>
+
+              {/* ── Recent Blogs ───────────────────────────── */}
+              <section id="blogs" className="mt-14 scroll-mt-24">
+                <div className="flex items-center justify-between mb-5">
+                  <p className="text-2xl font-bold select-none">Recent Blogs</p>
+                  <a
+                    href="/blog"
+                    className="text-sm font-mono text-muted hover:text-accent transition-colors select-none"
+                  >
+                    view all →
+                  </a>
+                </div>
+                <Suspense fallback={<RecentBlogsSkeleton />}>
+                  <RecentBlogs />
                 </Suspense>
               </section>
 

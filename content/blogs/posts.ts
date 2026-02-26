@@ -1,5 +1,6 @@
 import type { BlogPost } from "./index";
 
+/*
 export const post1: BlogPost = {
     slug: "why-i-reach-for-rust",
     title: "Why I Reach for Rust Even When It's Overkill",
@@ -187,3 +188,4 @@ There's no shortcut. The self-taught path takes longer than a CS degree in some 
 The people who make it are not the ones who are naturally talented — they're the ones who kept building things when it felt pointless. Keep building.
 `,
 };
+*/

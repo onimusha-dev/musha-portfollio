@@ -82,6 +82,7 @@ const NAV_ITEMS = [
   { id: "contributions", label: "Contributions" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
+  { id: "blogs", label: "Blogs" },
   { id: "projects", label: "Projects" },
 ];
 

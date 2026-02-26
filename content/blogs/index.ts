@@ -1,4 +1,4 @@
-import { post1, post2, post3 } from "./posts";
+import * as allPosts from "./posts";
 
 // ── BlogPost type ─────────────────────────────────────────────
 // Keep this shape stable — a future dashboard will write to this
@@ -15,8 +15,10 @@ export interface BlogPost {
 }
 
 // ── Posts registry ────────────────────────────────────────────
-// To add a new post: create a new BlogPost object in posts.ts and add it here.
-export const posts: BlogPost[] = [post1, post2, post3];
+// To add a new post: export a new BlogPost object in posts.ts and it will be autoloaded here.
+export const posts: BlogPost[] = (Object.values(allPosts) as BlogPost[]).sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
 
 // ── Helpers ───────────────────────────────────────────────────
 export function getPostBySlug(slug: string): BlogPost | undefined {
