@@ -1,4 +1,4 @@
-import { experience } from "@/constants";
+import { experience } from "@/app/constants";
 
 function Tag({ label }: { label: string }) {
     return (

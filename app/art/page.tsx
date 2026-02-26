@@ -1,6 +1,6 @@
 "use client";
 
-import { GALLERY } from "@/constants";
+import { GALLERY } from "@/app/constants";
 import { useCallback, useEffect, useState } from "react";
 import Skeleton from "@/components/ui/skeleton";
 import { Icons } from "@/components/ui/icons";

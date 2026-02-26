@@ -72,7 +72,7 @@ export default function Navbar() {
                             <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="p-2 text-foreground/40 hover:text-accent transition-colors">
                                 <Icons.GitHub className="w-5 h-5" />
                             </a>
-                            <a href="https://twitter.com/shvmmshr" target="_blank" rel="noopener noreferrer" className="p-2 text-foreground/40 hover:text-accent transition-colors">
+                            <a href="https://twitter.com/Onimusha_Dev" target="_blank" rel="noopener noreferrer" className="p-2 text-foreground/40 hover:text-accent transition-colors">
                                 <Icons.Twitter className="w-5 h-5" />
                             </a>
                         </div>

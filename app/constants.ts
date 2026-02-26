@@ -23,23 +23,23 @@ export const socials = [
     },
     {
         platform: "Twitter",
-        handle: "@shvmmshr",
-        url: "https://twitter.com/shvmmshr",
+        handle: "@Onimusha_Dev",
+        url: "https://twitter.com/Onimusha_Dev",
     },
     {
         platform: "LinkedIn",
-        handle: "musha",
-        url: "https://linkedin.com/in/musha",
+        handle: "oni-musha-a70459360",
+        url: "https://www.linkedin.com/in/oni-musha-a70459360",
     },
     {
         platform: "Discord",
-        handle: "musha#0000",
-        url: "https://discord.com",
+        handle: "onimusha.dev",
+        url: "https://discord.com/users/1302743050518265969",
     },
     {
         platform: "Email",
-        handle: "musha@example.com",
-        url: "mailto:musha@example.com",
+        handle: "musaddik.dev@gmail.com",
+        url: "mailto:musaddik.dev@gmail.com",
     },
 ]
 
@@ -93,7 +93,7 @@ export const projects = [
         description: "This portfolio — a Next.js app with multi-scheme theming, GitHub contribution graph, and a blog engine.",
         tags: ["Next.js", "TypeScript", "Tailwind"],
         repoUrl: "https://github.com/onimusha-dev/portfolio",
-        liveUrl: "https://musha-portfollio.vercel.app/",
+        liveUrl: "https://musha.vercel.app/",
         stars: 1,
         wip: false,
         category: "Web App",
@@ -120,4 +120,5 @@ export const GALLERY = [
     { id: 3, src: "https://i.pinimg.com/1200x/8c/1d/24/8c1d246dc322b35302cc1cd44e15a79c.jpg", title: "Portrait I", medium: "Digital", year: "2025" },
     { id: 4, src: "https://i.pinimg.com/736x/bc/56/f2/bc56f25a6c7a99c9a1bbb4cd8f0629f4.jpg", title: "Architecture", medium: "Photo", year: "2024" },
     { id: 5, src: "https://i.pinimg.com/736x/2a/62/49/2a624911a25ad63c4e8e18d66c582b07.jpg", title: "Pimon", medium: "Photo", year: "2025" },
+    { id: 6, src: 'https://i.pinimg.com/1200x/02/68/2c/02682ccf591ddb8b1a9f5f0944b04fbc.jpg', title: "Portrait II", medium: "Digital", year: "2025" }
 ];

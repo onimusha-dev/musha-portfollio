@@ -1,4 +1,4 @@
-import { projects } from "@/constants";
+import { projects } from "@/app/constants";
 import { Icons } from "@/components/ui/icons";
 
 export default function FeaturedProjects() {

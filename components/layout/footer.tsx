@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { socials } from "@/constants";
+import { socials } from "@/app/constants";
 import { Icons } from "@/components/ui/icons";
 
 const PAGES = [

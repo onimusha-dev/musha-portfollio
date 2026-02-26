@@ -5,7 +5,7 @@ import SidebarNav from "@/components/layout/sidebar-nav";
 import ExperienceTimeline from "@/components/sections/experience-timeline";
 import FeaturedProjects from "@/components/sections/featured-projects";
 
-import { skillGroups } from "@/constants";
+import { skillGroups } from "@/app/constants";
 import Footer from "@/components/layout/footer";
 
 export default function Home() {

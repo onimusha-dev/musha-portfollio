@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
+const showDevTools = process.env.NEXT_PUBLIC_DEV_TOOLS === "true";
+
 const nextConfig: NextConfig = {
+  devIndicators: showDevTools ? {} : false,
   images: {
     remotePatterns: [
       {

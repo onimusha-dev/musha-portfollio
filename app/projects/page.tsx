@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/constants";
+import { projects } from "@/app/constants";
 import { Icons } from "@/components/ui/icons";
 
 /* ─────────────────────────────────────────────────────────────
