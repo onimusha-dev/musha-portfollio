@@ -13,9 +13,35 @@ export default function Home() {
     <>
       <div className="pb-24">
 
-        {/* ── Full-width Banner ──────────────────────────────── */}
-        <div className="w-full px-4 sm:px-6 pt-6">
-          <div className="max-w-5xl mx-auto h-52 sm:h-60 bg-neutral-200 dark:bg-neutral-800 rounded-2xl overflow-hidden relative">
+        {/* ── Banner ─────────────────────────────────────────
+             Mobile : full-bleed, bleeds behind the sticky navbar
+             Desktop: padded rounded card (unchanged)
+        ── */}
+
+        {/* Mobile: absolute-height hero block that pulls up behind navbar */}
+        <div className="sm:hidden w-full -mt-16 relative h-72">
+          <ImageWithPlaceholder
+            src="/images/banner.webp"
+            alt="Banner"
+            fill priority
+            containerClassName="w-full h-full"
+            className="object-cover select-none"
+            sizes="100vw"
+            draggable={false}
+          />
+          {/* bottom fade so avatar text stays readable */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 40%, var(--background) 100%)",
+            }}
+          />
+        </div>
+
+        {/* Desktop: padded, rounded card inside max-width container */}
+        <div className="hidden sm:block w-full px-6 pt-6">
+          <div className="max-w-5xl mx-auto h-60 bg-neutral-200 dark:bg-neutral-800 rounded-2xl overflow-hidden relative">
             <ImageWithPlaceholder
               src="/images/banner.webp"
               alt="Banner"
@@ -32,7 +58,9 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
           {/* Avatar + name — peeks below banner */}
-          <div className="flex gap-4 items-end -mt-14 pl-2">
+          {/* Mobile: -mt-20 to pull up from the taller full-bleed banner */}
+          {/* Desktop: -mt-14 as before */}
+          <div className="flex gap-4 items-end -mt-20 sm:-mt-14 pl-2">
             <div className="w-28 h-28 md:w-36 md:h-36 bg-neutral-300 dark:bg-neutral-800 rounded-full overflow-hidden border-4 border-background shrink-0 relative backdrop-blur-3xl shadow-lg">
               <ImageWithPlaceholder
                 src="/images/logo.webp"
