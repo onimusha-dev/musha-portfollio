@@ -235,7 +235,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-5">
                   <p className="text-2xl font-bold select-none">Recent Blogs</p>
                   <a
-                    href="/blog"
+                    href="/blogs"
                     className="text-sm font-mono text-muted hover:text-accent transition-colors select-none"
                   >
                     view all →

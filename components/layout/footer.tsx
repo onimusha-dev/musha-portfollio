@@ -5,8 +5,8 @@ import { Icons } from "@/components/ui/icons";
 const PAGES = [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
-    { href: "/blog", label: "Blog" },
-    { href: "/art", label: "Art Gallery" },
+    { href: "/blogs", label: "Blog" },
+    { href: "/art-gallery", label: "Art Gallery" },
 ];
 
 export default function Footer() {
