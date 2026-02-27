@@ -2,9 +2,12 @@ import { projects } from "@/app/constants";
 import { Icons } from "@/components/ui/icons";
 
 export default function FeaturedProjects() {
+    // Show up to 4 projects
+    const featuredProjects = projects.slice(0, 4);
+
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {projects.map((project) => (
+            {featuredProjects.map((project) => (
                 <div
                     key={project.name}
                     className="group flex flex-col p-5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:border-accent"
