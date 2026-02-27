@@ -34,7 +34,7 @@ export default function RecentBlogs() {
             {recentPosts.map((post) => (
                 <Link
                     key={post.slug}
-                    href={`/blog/${post.slug}`}
+                    href={`/blogs/${post.slug}`}
                     className="group flex flex-col p-5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:border-accent no-underline"
                     style={{ background: "var(--card)", border: "1px solid var(--card-border)" }}
                 >
