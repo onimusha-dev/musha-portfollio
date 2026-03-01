@@ -2,15 +2,23 @@
 export const skillGroups = [
     {
         label: "Languages",
-        items: ["C", "JavaScript", "TypeScript", "Python", "Dart", "SQL"],
+        items: ["C", "C++", "JavaScript", "TypeScript", "Dart", "SQL"],
     },
     {
-        label: "Frameworks",
+        label: "Frontend",
         items: ["Flutter", "React", "Next.js", "shadcn/ui", "Tailwind CSS"],
     },
     {
+        label: "Backend",
+        items: ["Express.js", "Node.js"],
+    },
+    {
+        label: "Database",
+        items: ["MongoDB", "PostgreSQL"],
+    },
+    {
         label: "Tools & Infra",
-        items: ["Docker", "PostgreSQL", "Git", "Linux"],
+        items: ["Docker", "Git", "Linux", "Postman"],
     },
 ]
 
@@ -101,7 +109,22 @@ export const projects = [
         wip: false,
         category: "Web App",
         image: "/projects/portfolio.webp",
-    }
+    },
+    // {
+    //     name: "SysFlow",
+    //     description: `
+    //   A lightweight system monitoring tool written in Go, providing real-time 
+    //   CPU, memory, and network usage stats with zero external dependencies.
+    //   Designed for low-overhead monitoring in containerized environments.
+    // `,
+    //     tags: ["Go", "Systems", "Monitoring"],
+    //     repoUrl: "https://github.com/onimusha-dev/SysFlow",
+    //     liveUrl: "",
+    //     stars: 3,
+    //     wip: false,
+    //     category: "Backend",
+    //     image: "/projects/sys-flow.webp",
+    // }
 ];
 
 // ── Education ─────────────────────────────────────────────── */
