@@ -9,12 +9,14 @@ import SkillGroups from "@/components/sections/skill-badges";
 import RecentBlogs, { RecentBlogsSkeleton } from "@/components/sections/recent-blogs";
 import { skillGroups } from "@/app/constants";
 import Footer from "@/components/layout/footer";
+import QuoteRotatorWrapper from "@/components/sections/quote-rotator-wrapper";
 
-/* ── Lazy-loaded client component (only one that ships JS) ── */
+/* ── Lazy-loaded client components ─────────────────────── */
 const GithubCommits = dynamic(
   () => import("@/components/sections/github-commits"),
   { loading: () => <CommitsSkeleton /> }
 );
+
 
 /* ── Section skeletons ───────────────────────────────────────── */
 function CommitsSkeleton() {
@@ -146,7 +148,7 @@ export default function Home() {
               alt="Banner"
               fill priority
               containerClassName="w-full h-full"
-              className="object-cover border select-none"
+              className="object-cover select-none"
               sizes="(max-width: 1024px) 100vw, 1024px"
               draggable={false}
             />
@@ -213,6 +215,9 @@ export default function Home() {
                   <GithubCommits />
                 </Suspense>
               </section>
+
+              {/* ── Quote rotator (client-only, lazy) ──────── */}
+              <QuoteRotatorWrapper />
 
               {/* ── Experience ─────────────────────────────── */}
               <section id="experience" className="mt-14 scroll-mt-24">

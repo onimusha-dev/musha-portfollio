@@ -129,11 +129,11 @@ export default function GithubCommits() {
 
             {/* card */}
             <div
-                className="rounded-2xl p-4 w-full"
+                className="rounded-2xl p-4 w-full overflow-x-clip"
                 style={{ background: "var(--card)", border: "1px dashed var(--card-border)" }}
             >
                 {/* graph inner — observed for width */}
-                <div ref={graphRef} className="w-full overflow-hidden">
+                <div ref={graphRef} className="w-full">
                     {loading ? (
                         /* skeleton */
                         <div className="flex" style={gapStyle}>
@@ -194,29 +194,41 @@ export default function GithubCommits() {
                                 </div>
 
                                 {/* weeks */}
-                                {displayWeeks.map((week, wi) => (
-                                    <div key={wi} className="flex flex-col" style={gapStyle}>
-                                        {week.map((day, di) => (
-                                            <div
-                                                key={di}
-                                                className="relative group cursor-default"
-                                                style={{
-                                                    ...cellStyle,
-                                                    ...heatStyle(day === null ? null : day.count),
-                                                }}
-                                            >
-                                                {day && (
-                                                    <div
-                                                        className="absolute z-10 bottom-[calc(100%+6px)] left-1/2 -translate-x-1/2 px-2 py-1 rounded text-[10px] font-mono whitespace-nowrap pointer-events-none select-none opacity-0 group-hover:opacity-100 transition-opacity"
-                                                        style={{ background: "var(--foreground)", color: "var(--background)" }}
-                                                    >
-                                                        {day.count} on {fmtDate(day.date)}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ))}
-                                    </div>
-                                ))}
+                                {displayWeeks.map((week, wi) => {
+                                    // Shift tooltip anchor based on column proximity to edges
+                                    const isRightEdge = wi >= displayWeeks.length - 4;
+                                    const isLeftEdge = wi < 4;
+                                    const tooltipPos = isRightEdge
+                                        ? "right-0"                         // pin to right of cell → grows leftward
+                                        : isLeftEdge
+                                            ? "left-0"                      // pin to left of cell → grows rightward
+                                            : "left-1/2 -translate-x-1/2"; // centered (default)
+
+                                    return (
+                                        <div key={wi} className="flex flex-col" style={gapStyle}>
+                                            {week.map((day, di) => (
+                                                <div
+                                                    key={di}
+                                                    className="relative group cursor-default"
+                                                    style={{
+                                                        ...cellStyle,
+                                                        ...heatStyle(day === null ? null : day.count),
+                                                    }}
+                                                >
+                                                    {day && (
+                                                        <div
+                                                            className={`absolute z-50 bottom-[calc(100%+6px)] ${tooltipPos} px-2 py-1 rounded text-[10px] font-mono whitespace-nowrap pointer-events-none select-none opacity-0 group-hover:opacity-100 transition-opacity`}
+                                                            style={{ background: "var(--foreground)", color: "var(--background)" }}
+                                                        >
+                                                            {day.count} on {fmtDate(day.date)}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    );
+                                })}
+
                             </div>
 
                             {/* footer */}
