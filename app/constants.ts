@@ -14,7 +14,7 @@ export const skillGroups = [
     },
     {
         label: "Database",
-        items: ["MongoDB", "PostgreSQL"],
+        items: ["MongoDB", "Mongoose", "PostgreSQL", "Prisma"],
     },
     {
         label: "Tools & Infra",
@@ -110,21 +110,6 @@ export const projects = [
         category: "Web App",
         image: "/projects/portfolio.webp",
     },
-    // {
-    //     name: "SysFlow",
-    //     description: `
-    //   A lightweight system monitoring tool written in Go, providing real-time 
-    //   CPU, memory, and network usage stats with zero external dependencies.
-    //   Designed for low-overhead monitoring in containerized environments.
-    // `,
-    //     tags: ["Go", "Systems", "Monitoring"],
-    //     repoUrl: "https://github.com/onimusha-dev/SysFlow",
-    //     liveUrl: "",
-    //     stars: 3,
-    //     wip: false,
-    //     category: "Backend",
-    //     image: "/projects/sys-flow.webp",
-    // }
 ];
 
 // ── Education ─────────────────────────────────────────────── */
@@ -138,6 +123,16 @@ export const education = [
         current: true,
     },
 ]
+
+// ── Quotes (cycling) ─────────────────────────────────────── */
+export const QUOTES = [
+    { text: "The best error message is the one that never shows up.", author: "Thomas Fuchs" },
+    { text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" },
+    { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
+    { text: "Code is like humor. When you have to explain it, it's bad.", author: "Cory House" },
+    { text: "Make it work, make it right, make it fast.", author: "Kent Beck" },
+    { text: "Truth can only be found in one place: the code.", author: "Robert C. Martin" },
+];
 
 /* ── Demo gallery data (replace src with real art paths later) ── */
 export const GALLERY = [
