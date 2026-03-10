@@ -81,6 +81,20 @@ export const projects = [
         image: "/projects/zerra.png",
     },
     {
+        name: "Ascend",
+        description: `
+        A Flutter & Firebase task manager with real-time updates, 
+        offline backup, and multi-scheme theming for a seamless experience.
+    `,
+        tags: ["Flutter", "Firebase", "Dart"],
+        repoUrl: "https://github.com/onimusha-dev/ascend-mobile",
+        liveUrl: "",
+        stars: 1,
+        wip: true,
+        category: "Mobile App",
+        image: "/projects/ascend.png",
+    },
+    {
         name: "Chai-Chan",
         description: `
       A local AI chatbot powered by Ollama with MongoDB storage and 
@@ -93,20 +107,6 @@ export const projects = [
         wip: false,
         category: "Web App",
         image: "/projects/chai-chan.webp",
-    },
-    {
-        name: "Ascend",
-        description: `
-      A Flutter & Firebase task manager with real-time updates, 
-      offline backup, and multi-scheme theming for a seamless experience.
-    `,
-        tags: ["Flutter", "Firebase", "Dart"],
-        repoUrl: "https://github.com/onimusha-dev/ascend-mobile",
-        liveUrl: "",
-        stars: 1,
-        wip: true,
-        category: "Mobile App",
-        image: "/projects/ascend.png",
     },
     {
         name: "Portfolio",
@@ -132,7 +132,7 @@ export const projects = [
         tags: ["React", "TypeScript", "Netlify"],
         repoUrl: "https://github.com/onimusha-dev/vercel-clone",
         liveUrl: "https://vercel-clone-by-miku.netlify.app/",
-        stars: 0,
+        stars: 1,
         wip: false,
         category: "Website",
         image: "/projects/vercel-clone.png",
