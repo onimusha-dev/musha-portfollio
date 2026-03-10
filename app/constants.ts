@@ -67,33 +67,46 @@ export const experience = [
 // ── Featured Projects ─────────────────────────────────────── */
 export const projects = [
     {
-        name: "Chai-Chan",
+        name: "Zerra",
         description: `
-      A GPT-style AI chatbot powered by Ollama local models, featuring MongoDB-backed persistent storage, 
-      user-based authentication, and secure token visualization. making it a fully-featured, self-hosted AI chat platform.
+      A Twitter clone monorepo built with MERN stack, Prisma, and Next.js. 
+      Focuses on scalable backend architecture with clean OOP principles.
     `,
-        tags: ["Node.js", "MongoDB", "React", "shadcn/ui"],
-        repoUrl: "https://github.com/onimusha-dev/Chai-Chan",
+        tags: ["Next.js", "Prisma", "MERN", "OOP"],
+        repoUrl: "https://github.com/onimusha-dev/Zerra",
         liveUrl: "",
         stars: 1,
         wip: true,
-        category: "Backend",
+        category: "Web App",
+        image: "/projects/zerra.png",
+    },
+    {
+        name: "Chai-Chan",
+        description: `
+      A local AI chatbot powered by Ollama with MongoDB storage and 
+      user authentication, creating a secure, self-hosted AI chat platform.
+    `,
+        tags: ["Node", "MongoDB", "React", "shadcn"],
+        repoUrl: "https://github.com/onimusha-dev/Chai-Chan",
+        liveUrl: "",
+        stars: 1,
+        wip: false,
+        category: "Web App",
         image: "/projects/chai-chan.webp",
     },
     {
-        name: "Task Manager",
+        name: "Ascend",
         description: `
-      A task manager built with Flutter and Firebase, featuring task management, 
-      user-based authentication, and real-time updates. 
-      Supports multi-scheme theming, offline backup, Notification system, task sharing, and more. 
+      A Flutter & Firebase task manager with real-time updates, 
+      offline backup, and multi-scheme theming for a seamless experience.
     `,
         tags: ["Flutter", "Firebase", "Dart"],
-        repoUrl: "https://github.com/onimusha-dev/task-manager",
-        liveUrl: "https://github.com/onimusha-dev/simple-task-manager-app",
+        repoUrl: "https://github.com/onimusha-dev/ascend-mobile",
+        liveUrl: "",
         stars: 1,
         wip: true,
         category: "Mobile App",
-        image: "/projects/any_task.webp",
+        image: "/projects/ascend.png",
     },
     {
         name: "Portfolio",
@@ -102,8 +115,8 @@ export const projects = [
       a live GitHub contribution graph, and a blog engine. Fully typed with TypeScript 
       and styled using Tailwind CSS for a modern, responsive UI.
     `,
-        tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-        repoUrl: "https://github.com/onimusha-dev/portfolio",
+        tags: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: "https://github.com/onimusha-dev/musha-portfollio",
         liveUrl: "https://musha.vercel.app/",
         stars: 1,
         wip: false,
@@ -136,6 +149,12 @@ export const QUOTES = [
 
 /* ── Demo gallery data (replace src with real art paths later) ── */
 export const GALLERY = [
+    {
+        src: "/art/miku_chan.jpg",
+        title: "Miku Chan",
+        medium: "Digital Art",
+        year: "2026",
+    },
     {
         src: "/art/golden_elf_sketch.webp",
         title: "Golden Elf Sketch",
