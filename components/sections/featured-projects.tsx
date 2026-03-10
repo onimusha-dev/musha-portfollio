@@ -31,7 +31,7 @@ export default function FeaturedProjects() {
                     </div>
 
                     {/* description */}
-                    <p className="text-sm font-mono leading-relaxed opacity-75 flex-1 mb-4">
+                    <p className="text-sm font-mono leading-relaxed opacity-75 mb-4 line-clamp-3 min-h-18">
                         {project.description}
                     </p>
 

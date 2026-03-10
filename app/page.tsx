@@ -10,12 +10,15 @@ import RecentBlogs, { RecentBlogsSkeleton } from "@/components/sections/recent-b
 import { skillGroups } from "@/app/constants";
 import Footer from "@/components/layout/footer";
 import QuoteRotatorWrapper from "@/components/sections/quote-rotator-wrapper";
+import DiscordStatusWrapper from "@/components/sections/discord-status-wrapper";
+
 
 /* ── Lazy-loaded client components ─────────────────────── */
 const GithubCommits = dynamic(
   () => import("@/components/sections/github-commits"),
   { loading: () => <CommitsSkeleton /> }
 );
+
 
 
 /* ── Section skeletons ───────────────────────────────────────── */
@@ -176,6 +179,7 @@ export default function Home() {
               <p className="text-base font-mono opacity-75 cursor-text mt-0.5">
                 20 · self taught · developer
               </p>
+              {/* <DiscordStatusWrapper /> */}  {/* TODO: enable after joining Lanyard */}
             </div>
           </div>
 

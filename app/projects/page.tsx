@@ -134,7 +134,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                 </p>
 
                 {/* description */}
-                <p className="text-sm font-mono leading-relaxed flex-1 opacity-75 mb-4">
+                <p className="text-sm font-mono leading-relaxed opacity-75 mb-4 line-clamp-3 min-h-18">
                     {project.description}
                 </p>
 
