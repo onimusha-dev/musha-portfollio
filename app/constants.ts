@@ -88,7 +88,7 @@ export const projects = [
     `,
         tags: ["Flutter", "Firebase", "Dart"],
         repoUrl: "https://github.com/onimusha-dev/ascend-mobile",
-        liveUrl: "",
+        liveUrl: "https://github.com/onimusha-dev/ascend-mobile/releases/tag/v1.0.0-beta.1",
         stars: 1,
         wip: true,
         category: "Mobile App",
