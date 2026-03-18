@@ -66,31 +66,50 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                 src={project.image}
                 alt={`${project.name} preview`}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 select-none"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
             {/* gradient overlay */}
             <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
 
-            {/* top-right badges */}
-            <div className="absolute top-3 right-3 flex items-center gap-2">
-                {project.wip && (
-                    <span className="text-sm font-mono font-semibold px-2.5 py-0.5 rounded-full select-none bg-yellow-500/90 text-yellow-950">
-                        WIP
-                    </span>
-                )}
-                <span
-                    className="text-sm font-mono px-2.5 py-0.5 rounded-full select-none"
-                    style={{ background: "var(--accent)", color: "var(--card)" }}
-                >
-                    {project.category}
-                </span>
-            </div>
-
             {/* star count bottom-left */}
-            <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-white/80 text-sm font-mono">
-                <Icons.Star className="w-4 h-4 text-yellow-400" />
-                <span>{project.stars}</span>
+            <div className="absolute bottom-3 px-3 w-full flex items-center gap-3 justify-between text-white/80 text-sm font-mono">
+                <div className="flex gap-1 items-center justify-center">
+                    <Icons.Star className="w-4 h-4 text-yellow-400" />
+                    <span>{project.stars}</span>
+                </div>
+                <div className="flex items-center gap-3 justify-center">
+                    {project.repoUrl && (
+                        <a
+                            href={project.repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 p-2 rounded-full text-sm font-mono transition-all duration-150 hover:-translate-y-px hover:text-accent hover:border-accent/40"
+                            style={{
+                                background: "var(--c0)",
+                                border: "1px solid var(--card-border)",
+                                color: "var(--muted)",
+                            }}
+                        >
+                            <Icons.GitHub className="w-4 h-4 shrink-0" />
+                        </a>
+                    )}
+                    {project.liveUrl && (
+                        <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 p-2 rounded-full text-sm font-mono transition-all duration-150 hover:-translate-y-px"
+                            style={{
+                                background: "var(--accent)",
+                                border: "1px solid transparent",
+                                color: "var(--card)",
+                            }}
+                        >
+                            <Icons.External className="w-4 h-4 shrink-0" />
+                        </a>
+                    )}
+                </div>
             </div>
         </>
     );
@@ -109,17 +128,13 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
         >
             {/* ── Thumbnail — liveUrl → repoUrl → non-clickable ── */}
             {imageHref ? (
-                <a
-                    href={imageHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${thumbClass} block cursor-pointer`}
+                <div className={`${thumbClass} block`}
                     style={thumbStyle}
                     tabIndex={-1}
                     aria-hidden="true"
                 >
                     {imageInner}
-                </a>
+                </div>
             ) : (
                 <div className={thumbClass} style={thumbStyle}>
                     {imageInner}
@@ -129,21 +144,16 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             {/* ── Card Body ── */}
             <div className="flex flex-col flex-1 p-5">
                 {/* title */}
-                <p className="text-base font-bold font-mono mb-2.5 group-hover:text-accent transition-colors duration-200">
+                <p className="text-xl font-bold font-mono mb-2.5 group-hover:text-accent transition-colors duration-200">
                     {project.name}
                 </p>
 
-                {/* description */}
-                <p className="text-sm font-mono leading-relaxed opacity-75 mb-4 line-clamp-3 min-h-18">
-                    {project.description}
-                </p>
-
                 {/* tags */}
-                <div className="flex flex-wrap gap-1.5 mb-5">
+                <div className="flex flex-wrap gap-5 mb-2.5">
                     {project.tags.map(tag => (
                         <span
                             key={tag}
-                            className="text-sm font-mono px-2.5 py-0.5 rounded-full select-none"
+                            className="text-sm font-mono py-0.5 rounded-full select-none"
                             style={{ background: "var(--c0)", color: "var(--muted)" }}
                         >
                             {tag}
@@ -151,47 +161,10 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                     ))}
                 </div>
 
-                {/* ── Action buttons ── */}
-                <div
-                    className="flex items-center gap-2 pt-4"
-                    style={{ borderTop: "1px solid var(--card-border)" }}
-                >
-                    {/* GitHub */}
-                    {project.repoUrl && (
-                        <a
-                            href={project.repoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-mono transition-all duration-150 hover:-translate-y-px hover:text-accent hover:border-accent/40"
-                            style={{
-                                background: "var(--c0)",
-                                border: "1px solid var(--card-border)",
-                                color: "var(--muted)",
-                            }}
-                        >
-                            <Icons.GitHub className="w-4 h-4 shrink-0" />
-                            GitHub
-                        </a>
-                    )}
-
-                    {/* Live View */}
-                    {project.liveUrl && (
-                        <a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-mono transition-all duration-150 hover:-translate-y-px"
-                            style={{
-                                background: "var(--accent)",
-                                border: "1px solid transparent",
-                                color: "var(--card)",
-                            }}
-                        >
-                            <Icons.External className="w-4 h-4 shrink-0" />
-                            Live View
-                        </a>
-                    )}
-                </div>
+                {/* description */}
+                <p className="text-sm font-mono leading-relaxed opacity-75 line-clamp-3 min-h-18">
+                    {project.description}
+                </p>
             </div>
         </div>
     );

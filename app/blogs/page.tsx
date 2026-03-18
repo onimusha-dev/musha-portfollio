@@ -19,6 +19,14 @@ function BlogCard({ post }: { post: (typeof posts)[number] }) {
         >
             {/* Left: text */}
             <div className="flex-1 min-w-0">
+                {/* title */}
+                <h2
+                    className="text-xl font-bold leading-snug mb-2 transition-colors duration-150 group-hover:text-accent"
+                    style={{ color: "var(--foreground)" }}
+                >
+                    {post.title}
+                </h2>
+
                 {/* tags */}
                 <div className="flex flex-wrap gap-1.5 mb-3">
                     {post.tags.map((tag) => (
@@ -35,14 +43,6 @@ function BlogCard({ post }: { post: (typeof posts)[number] }) {
                         </span>
                     ))}
                 </div>
-
-                {/* title */}
-                <h2
-                    className="text-xl font-bold leading-snug mb-2 transition-colors duration-150 group-hover:text-accent"
-                    style={{ color: "var(--foreground)" }}
-                >
-                    {post.title}
-                </h2>
 
                 {/* excerpt */}
                 <p
@@ -61,8 +61,9 @@ function BlogCard({ post }: { post: (typeof posts)[number] }) {
                     <span className="opacity-60">·</span>
                     <span>{post.readTime}</span>
                     <span className="opacity-60">·</span>
+                    <div className="flex-1"></div>
                     <span
-                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center gap-1"
+                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex items-center gap-1 mr-5"
                         style={{ color: "var(--accent)" }}
                     >
                         Read →

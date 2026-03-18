@@ -14,8 +14,8 @@ export default function FeaturedProjects() {
                     style={{ background: "var(--card)", border: "1px solid var(--card-border)" }}
                 >
                     {/* header row — name + wip + stars */}
-                    <div className="flex items-start justify-between gap-2 mb-2.5">
-                        <p className="text-base font-bold font-mono group-hover:text-accent transition-colors duration-200">
+                    <div className="flex items-center justify-between gap-2 mb-2.5">
+                        <p className="font-bold text-2xl font-mono group-hover:text-accent transition-colors duration-200">
                             {project.name}
                         </p>
                         <div className="flex items-center gap-2 shrink-0">
@@ -30,23 +30,23 @@ export default function FeaturedProjects() {
                         </div>
                     </div>
 
-                    {/* description */}
-                    <p className="text-sm font-mono leading-relaxed opacity-75 mb-4 line-clamp-3 min-h-18">
-                        {project.description}
-                    </p>
-
                     {/* tags */}
-                    <div className="flex flex-wrap gap-1.5 mb-5">
+                    <div className="flex flex-wrap gap-5 mb-2.5">
                         {project.tags.map(tag => (
                             <span
                                 key={tag}
-                                className="text-sm font-mono px-2.5 py-0.5 rounded-full select-none"
+                                className="text-sm font-mono py-0.5 rounded-full select-none"
                                 style={{ background: "var(--c0)", color: "var(--muted)" }}
                             >
                                 {tag}
                             </span>
                         ))}
                     </div>
+
+                    {/* description */}
+                    <p className="text-sm font-mono leading-relaxed opacity-75 mb-4 line-clamp-3 min-h-18">
+                        {project.description}
+                    </p>
 
                     {/* ── Action buttons ── */}
                     <div
