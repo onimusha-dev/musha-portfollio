@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/layout/footer";
 import { ThemeProvider } from "@/lib/theme";
+import { JetBrains_Mono } from "next/font/google";
+import localFont from 'next/font/local'
 
 /* ── Fonts (self-hosted by Next.js, preloaded automatically) ── */
 const inter = Inter({
@@ -47,15 +48,15 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){
-  try {
-    var m = localStorage.getItem('theme-mode');
-    var s = localStorage.getItem('theme-scheme') || 'blue';
-    var dark = m !== null ? m === 'dark'
-      : window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (dark) document.documentElement.classList.add('dark');
-    document.documentElement.setAttribute('data-scheme', s);
-  } catch(e) {}
-})();`,
+                        try {
+                          var m = localStorage.getItem('theme-mode');
+                          var s = localStorage.getItem('theme-scheme') || 'blue';
+                          var dark = m !== null ? m === 'dark'
+                            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+                          if (dark) document.documentElement.classList.add('dark');
+                          document.documentElement.setAttribute('data-scheme', s);
+                        } catch(e) {}
+                      })();`,
           }}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>

@@ -144,16 +144,16 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             {/* ── Card Body ── */}
             <div className="flex flex-col flex-1 p-5">
                 {/* title */}
-                <p className="text-xl font-bold font-mono mb-2.5 group-hover:text-accent transition-colors duration-200">
+                <h3 className="text-xl font-bold font-mono mb-2.5 group-hover:text-accent transition-colors duration-200">
                     {project.name}
-                </p>
+                </h3>
 
                 {/* tags */}
-                <div className="flex flex-wrap gap-5 mb-2.5">
+                <div className="flex flex-wrap gap-2 mb-2.5">
                     {project.tags.map(tag => (
                         <span
                             key={tag}
-                            className="text-sm font-mono py-0.5 rounded-full select-none"
+                            className="text-xs font-mono px-2 py-0.5 rounded-full select-none"
                             style={{ background: "var(--c0)", color: "var(--muted)" }}
                         >
                             {tag}

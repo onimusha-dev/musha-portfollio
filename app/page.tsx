@@ -115,7 +115,7 @@ function ProjectsSkeleton() {
 export default function Home() {
   return (
     <>
-      <div className="pb-24">
+      <div className="md:pb-24">
 
         {/* ── Banner ─────────────────────────────────────────
              Mobile : full-bleed, bleeds behind the sticky navbar
@@ -162,7 +162,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
           {/* Avatar + name — peeks below banner */}
-          <div className="flex gap-4 items-end -mt-20 sm:-mt-14 pl-2">
+          <div className="flex gap-4 items-end -mt-20 sm:-mt-14 md:pl-2">
             <div className="w-28 h-28 md:w-36 md:h-36 bg-neutral-300 dark:bg-neutral-800 rounded-full overflow-hidden border-4 border-background shrink-0 relative backdrop-blur-3xl shadow-lg">
               <ImageWithPlaceholder
                 src="/images/logo.webp"
@@ -214,7 +214,7 @@ export default function Home() {
 
               {/* ── GitHub Contributions ───────────────────── */}
               <section id="contributions" className="mt-14 scroll-mt-24">
-                <p className="text-2xl font-bold select-none mb-4">Contributions</p>
+                <h3 className="text-3xl font-bold select-none mb-4">Contributions</h3>
                 <Suspense fallback={<CommitsSkeleton />}>
                   <GithubCommits />
                 </Suspense>
@@ -225,7 +225,7 @@ export default function Home() {
 
               {/* ── Experience ─────────────────────────────── */}
               <section id="experience" className="mt-14 scroll-mt-24">
-                <p className="text-2xl font-bold select-none mb-5">Experience</p>
+                <h3 className="text-3xl font-bold select-none mb-5">Experience</h3>
                 <Suspense fallback={<ExperienceSkeleton />}>
                   <ExperienceTimeline />
                 </Suspense>
@@ -233,7 +233,7 @@ export default function Home() {
 
               {/* ── Skills (grouped) ──────────────────────── */}
               <section id="skills" className="mt-14 scroll-mt-24">
-                <p className="text-2xl font-bold select-none mb-6">Skills</p>
+                <h3 className="text-3xl font-bold select-none mb-6">Skills</h3>
                 <Suspense fallback={<SkillsSkeleton />}>
                   <SkillGroups groups={skillGroups} />
                 </Suspense>
@@ -242,7 +242,7 @@ export default function Home() {
               {/* ── Recent Blogs ───────────────────────────── */}
               <section id="blogs" className="mt-14 scroll-mt-24">
                 <div className="flex items-center justify-between mb-5">
-                  <p className="text-2xl font-bold select-none">Recent Blogs</p>
+                  <h3 className="text-3xl font-bold select-none">Recent Blogs</h3>
                   <a
                     href="/blogs"
                     className="text-sm font-mono text-muted hover:text-accent transition-colors select-none"
@@ -258,7 +258,7 @@ export default function Home() {
               {/* ── Featured Projects ──────────────────────── */}
               <section id="projects" className="mt-14 scroll-mt-24">
                 <div className="flex items-center justify-between mb-5">
-                  <p className="text-2xl font-bold select-none">Projects</p>
+                  <h3 className="text-3xl font-bold select-none">Projects</h3>
                   <a
                     href="/projects"
                     className="text-sm font-mono text-muted hover:text-accent transition-colors select-none"

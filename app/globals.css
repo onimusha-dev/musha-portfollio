@@ -3,36 +3,29 @@
 /* ── Dark mode via .dark class ─────────────────────────────── */
 @variant dark (&:where(.dark, .dark *));
 
-/* ── Ubuntu Mono (local font, served from /public) ─────────── */
+/* ── JetBrains Mono (local font, served from /public) ─────────── */
 @font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('/fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('/fonts/Ubuntu_Mono/UbuntuMono-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'Mona Sans';
+  src: url('/fonts/Mona_Sans/MonaSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  /* variable font */
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('/fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -170,10 +163,9 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
 
-  /* Inter + Caveat are injected as CSS vars via next/font class on <body> */
-  --font-mono: 'Ubuntu Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  --font-sans: var(--font-inter, 'Inter', ui-sans-serif, system-ui, sans-serif);
-  --font-ubuntu: 'Ubuntu Mono', ui-monospace, monospace;
+  /* Custom fonts: Mona Sans (body), JetBrains Mono (headings) */
+  --font-sans: 'Mona Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 /* ── Base ──────────────────────────────────────────────────── */
@@ -190,7 +182,8 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter, 'Inter', ui-sans-serif, system-ui, sans-serif);
+  font-family: var(--font-sans);
+  font-variation-settings: "wdth" 100;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -198,7 +191,33 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-mono);
+}
+
+code,
+p,
+pre {
+  font-family: var(--font-sans);
+  letter-spacing: 0.06em;
+}
+
 /* ── Smooth scroll ──────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+.dark ::selection {
+  background: var(--accent);
+  color: #0d1117; /* dark text for better contrast */
 }
