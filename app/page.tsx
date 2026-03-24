@@ -115,11 +115,11 @@ function ProjectsSkeleton() {
 export default function Home() {
   return (
     <>
-      <div className="pb-24">
+      <div className="md:pb-24">
 
         {/* ── Banner ─────────────────────────────────────────
-             Mobile : full-bleed, bleeds behind the sticky navbar
-             Desktop: padded rounded card (unchanged)
+              Mobile : full-bleed, bleeds behind the sticky navbar
+              Desktop: padded rounded card (unchanged)
         ── */}
 
         {/* Mobile: absolute-height hero block that pulls up behind navbar */}
@@ -162,7 +162,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
           {/* Avatar + name — peeks below banner */}
-          <div className="flex gap-4 items-end -mt-20 sm:-mt-14 pl-2">
+          <div className="flex gap-4 items-end -mt-20 sm:-mt-14 md:pl-2">
             <div className="w-28 h-28 md:w-36 md:h-36 bg-neutral-300 dark:bg-neutral-800 rounded-full overflow-hidden border-4 border-background shrink-0 relative backdrop-blur-3xl shadow-lg">
               <ImageWithPlaceholder
                 src="/images/logo.webp"
@@ -205,16 +205,16 @@ export default function Home() {
                 {/* role tags */}
                 <div className="flex flex-wrap gap-2 mt-5">
                   <div className="bg-blue-500/10 text-blue-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-blue-500/20">Android</div>
-                  <div className="bg-red-500/10    text-red-400    rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-red-500/20">Backend</div>
-                  <div className="bg-yellow-500/10   text-yellow-400   rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-yellow-500/20">DevOps</div>
-                  <div className="bg-purple-500/10 text-purple-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-purple-500/20">Low Level</div>
-                  <div className="bg-green-500/10  text-green-400  rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-green-500/20">日本語</div>
+                  <div className="bg-red-500/10 text-red-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-red-500/20">Backend</div>
+                  <div className="bg-yellow-500/10 text-yellow-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-yellow-500/20">Frontend</div>
+                  {/* <div className="bg-purple-500/10 text-purple-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-purple-500/20">Low Level</div> */}
+                  <div className="bg-green-500/10 text-green-400 rounded-full px-3.5 py-1.5 text-sm font-bold select-none cursor-pointer transition-all duration-150 hover:bg-green-500/20">日本語</div>
                 </div>
               </section>
 
               {/* ── GitHub Contributions ───────────────────── */}
               <section id="contributions" className="mt-14 scroll-mt-24">
-                <p className="text-2xl font-bold select-none mb-4">Contributions</p>
+                <h3 className="text-3xl font-bold select-none mb-4">Contributions</h3>
                 <Suspense fallback={<CommitsSkeleton />}>
                   <GithubCommits />
                 </Suspense>
@@ -225,7 +225,7 @@ export default function Home() {
 
               {/* ── Experience ─────────────────────────────── */}
               <section id="experience" className="mt-14 scroll-mt-24">
-                <p className="text-2xl font-bold select-none mb-5">Experience</p>
+                <h3 className="text-3xl font-bold select-none mb-5">Experience</h3>
                 <Suspense fallback={<ExperienceSkeleton />}>
                   <ExperienceTimeline />
                 </Suspense>
@@ -233,7 +233,7 @@ export default function Home() {
 
               {/* ── Skills (grouped) ──────────────────────── */}
               <section id="skills" className="mt-14 scroll-mt-24">
-                <p className="text-2xl font-bold select-none mb-6">Skills</p>
+                <h3 className="text-3xl font-bold select-none mb-6">Skills</h3>
                 <Suspense fallback={<SkillsSkeleton />}>
                   <SkillGroups groups={skillGroups} />
                 </Suspense>
@@ -242,7 +242,7 @@ export default function Home() {
               {/* ── Recent Blogs ───────────────────────────── */}
               <section id="blogs" className="mt-14 scroll-mt-24">
                 <div className="flex items-center justify-between mb-5">
-                  <p className="text-2xl font-bold select-none">Recent Blogs</p>
+                  <h3 className="text-3xl font-bold select-none">Recent Blogs</h3>
                   <a
                     href="/blogs"
                     className="text-sm font-mono text-muted hover:text-accent transition-colors select-none"
@@ -258,7 +258,7 @@ export default function Home() {
               {/* ── Featured Projects ──────────────────────── */}
               <section id="projects" className="mt-14 scroll-mt-24">
                 <div className="flex items-center justify-between mb-5">
-                  <p className="text-2xl font-bold select-none">Projects</p>
+                  <h3 className="text-3xl font-bold select-none">Projects</h3>
                   <a
                     href="/projects"
                     className="text-sm font-mono text-muted hover:text-accent transition-colors select-none"

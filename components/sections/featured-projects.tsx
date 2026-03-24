@@ -15,9 +15,9 @@ export default function FeaturedProjects() {
                 >
                     {/* header row — name + wip + stars */}
                     <div className="flex items-center justify-between gap-2 mb-2.5">
-                        <p className="font-bold text-2xl font-mono group-hover:text-accent transition-colors duration-200">
+                        <h3 className="font-bold text-2xl font-mono group-hover:text-accent transition-colors duration-200">
                             {project.name}
-                        </p>
+                        </h3>
                         <div className="flex items-center gap-2 shrink-0">
                             {project.wip && (
                                 <span className="text-sm font-mono px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 select-none">
@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
                         {project.tags.map(tag => (
                             <span
                                 key={tag}
-                                className="text-sm font-mono py-0.5 rounded-full select-none"
+                                className="text-xs font-mono px-2 py-0.5 rounded-full select-none"
                                 style={{ background: "var(--c0)", color: "var(--muted)" }}
                             >
                                 {tag}
