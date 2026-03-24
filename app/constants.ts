@@ -2,7 +2,7 @@
 export const skillGroups = [
     {
         label: "Languages",
-        items: ["C", "C++", "JavaScript", "TypeScript", "Dart", "SQL"],
+        items: ["JavaScript", "TypeScript", "Dart", "SQL", "python"],
     },
     {
         label: "Frontend",
@@ -10,7 +10,7 @@ export const skillGroups = [
     },
     {
         label: "Backend",
-        items: ["Express.js", "Node.js"],
+        items: ["Express.js", "Node.js", "Hono"],
     },
     {
         label: "Database",
@@ -37,7 +37,7 @@ export const socials = [
     {
         platform: "LinkedIn",
         handle: "oni-musha-a70459360",
-        url: "https://www.linkedin.com/in/oni-musha-a70459360",
+        url: "https://www.linkedin.com/in/musaddikul-islam-a70459360/",
     },
     {
         platform: "Discord",
@@ -55,11 +55,11 @@ export const socials = [
 export const experience = [
     {
         role: "Software Developer Intern",
-        company: "Neocap",
+        company: "Neocap Technologies Pvt. Ltd",
         location: "Remote",
-        start: "Sep 2025",
+        start: "Aug 2025",
         end: "Dec 2025",
-        description: `Developed and maintained full-stack features using Node.js and React.js, enhancing team productivity and user experience. Designed and implemented an internal dashboard to streamline team management, improving operational efficiency.`,
+        description: `Worked on developing and maintaining internal dashboards and full-stack features using React.js and Node.js. Focused on building responsive, user-friendly interfaces, integrating REST APIs, and managing dynamic data flow. Contributed to improving team workflows by designing scalable components and enhancing overall application usability and performance.`,
         tags: ["React.js", "Node.js", "shadcn/ui", "Tailwind CSS"],
     }
 ];
@@ -69,10 +69,10 @@ export const projects = [
     {
         name: "Zerra",
         description: `
-      A Twitter clone monorepo built with MERN stack, Prisma, and Next.js. 
-      Focuses on scalable backend architecture with clean OOP principles.
+        A Twitter clone monorepo built with MERN stack, Prisma, and Next.js. 
+        Focuses on scalable backend architecture with clean OOP principles.
     `,
-        tags: ["Next.js", "Prisma", "MERN", "OOP"],
+        tags: ["Next.js", "Hono", "Postgress", "Redis"],
         repoUrl: "https://github.com/onimusha-dev/Zerra",
         liveUrl: "https://zerra-nine.vercel.app/",
         stars: 1,
@@ -97,8 +97,8 @@ export const projects = [
     {
         name: "Chai-Chan",
         description: `
-      A local AI chatbot powered by Ollama with MongoDB storage and 
-      user authentication, creating a secure, self-hosted AI chat platform.
+        A local AI chatbot powered by Ollama with MongoDB storage and 
+        user authentication, creating a secure, self-hosted AI chat platform.
     `,
         tags: ["Node", "MongoDB", "React", "shadcn"],
         repoUrl: "https://github.com/onimusha-dev/Chai-Chan",
@@ -111,9 +111,9 @@ export const projects = [
     {
         name: "Portfolio",
         description: `
-      This personal portfolio built with Next.js showcases multi-scheme theming, 
-      a live GitHub contribution graph, and a blog engine. Fully typed with TypeScript 
-      and styled using Tailwind CSS for a modern, responsive UI.
+        This personal portfolio built with Next.js showcases multi-scheme theming, 
+        a live GitHub contribution graph, and a blog engine. Fully typed with TypeScript 
+        and styled using Tailwind CSS for a modern, responsive UI.
     `,
         tags: ["Next.js", "TypeScript", "Tailwind"],
         repoUrl: "https://github.com/onimusha-dev/musha-portfollio",
@@ -126,8 +126,8 @@ export const projects = [
     {
         name: "Vercel Clone",
         description: `
-      My oldest project where I tried to recreate the Vercel landing page 
-      to practice modern frontend layouts and design principles.
+        My oldest project where I tried to recreate the Vercel landing page 
+        to practice modern frontend layouts and design principles.
     `,
         tags: ["React", "TypeScript", "Netlify"],
         repoUrl: "https://github.com/onimusha-dev/vercel-clone",
