@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   },
 };
 
+import BackendWarmup from "@/components/layout/BackendWarmup";
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -63,6 +65,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${caveat.variable} antialiased min-h-screen flex flex-col overflow-x-hidden`}>
         <ThemeProvider>
+          <BackendWarmup />
           <Navbar />
           <main className="flex-1">
             {children}
