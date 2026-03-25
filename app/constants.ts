@@ -36,8 +36,8 @@ export const socials = [
     },
     {
         platform: "LinkedIn",
-        handle: "oni-musha-a70459360",
-        url: "https://www.linkedin.com/in/musaddikul-islam-a70459360/",
+        handle: "musaddikul-islam",
+        url: "https://www.linkedin.com/in/musaddikul-islam",
     },
     {
         platform: "Discord",
