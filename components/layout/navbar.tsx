@@ -70,7 +70,7 @@ export default function Navbar() {
                         {/* Connections */}
                         <div className="flex items-center gap-0.5 mr-2">
                             {/* CV button — add your resume URL to RESUME_URL when ready */}
-                            <button
+                            {/* <button
                                 onClick={() => {
                                     const RESUME_URL = ""; // TODO: add your resume link here
                                     console.log("CV button clicked", RESUME_URL || "(no URL set yet)");
@@ -84,7 +84,7 @@ export default function Navbar() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
                                 </svg>
                                 CV
-                            </button>
+                            </button> */}
                             <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="p-2 text-foreground/50 hover:text-accent transition-colors" aria-label="GitHub">
                                 <Icons.GitHub className="w-5 h-5" />
                             </a>
@@ -178,7 +178,7 @@ export default function Navbar() {
 
                     {/* Mobile Connections */}
                     <div className="pt-5 mt-5 flex items-center gap-3" style={{ borderTop: "1px solid var(--card-border)" }}>
-                        <button
+                        {/* <button
                             onClick={() => {
                                 const RESUME_URL = ""; // TODO: add your resume link here
                                 console.log("CV button clicked", RESUME_URL || "(no URL set yet)");
@@ -191,7 +191,7 @@ export default function Navbar() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
                             </svg>
                             CV
-                        </button>
+                        </button> */}
                         <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="flex flex-1 justify-center py-2 items-center gap-2 text-base font-mono bg-foreground/5 rounded-xl text-foreground/50 hover:text-accent hover:bg-foreground/10 transition-all">
                             <Icons.GitHub className="w-5 h-5" /> GitHub
                         </a>
