@@ -228,5 +228,7 @@ export const certifications = [
         url: "https://www.udemy.com/certificate/UC-2f97a406-a9a7-49ff-aa6e-7b9ea4f19e39/",
         instructor: "Joseph Heidari",
         certificateId: "UC-2f97a406-a9a7-49ff-aa6e-7b9ea4f19e39",
+        length: "77h",
+        ref: "0004",
     },
 ]
