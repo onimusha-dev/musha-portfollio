@@ -7,7 +7,8 @@ import ExperienceTimeline from "@/components/sections/experience-timeline";
 import FeaturedProjects from "@/components/sections/featured-projects";
 import SkillGroups from "@/components/sections/skill-badges";
 import RecentBlogs, { RecentBlogsSkeleton } from "@/components/sections/recent-blogs";
-import { skillGroups } from "@/app/constants";
+import { skillGroups, certifications } from "@/app/constants";
+import Certifications from "@/components/sections/certifications";
 import Footer from "@/components/layout/footer";
 import QuoteRotatorWrapper from "@/components/sections/quote-rotator-wrapper";
 import DiscordStatusWrapper from "@/components/sections/discord-status-wrapper";
@@ -269,6 +270,12 @@ export default function Home() {
                 <Suspense fallback={<ProjectsSkeleton />}>
                   <FeaturedProjects />
                 </Suspense>
+              </section>
+
+              {/* ── Certifications ──────────────────────────── */}
+              <section id="certifications" className="mt-14 scroll-mt-24">
+                <h3 className="text-3xl font-bold select-none mb-6">Certifications</h3>
+                <Certifications />
               </section>
 
             </main>

@@ -15,17 +15,22 @@ export default function SidebarNavClient({ items }: { items: Item[] }) {
 
   useEffect(() => {
     const getActive = () => {
-      const scrollY = window.scrollY + OFFSET;
-
-      // Walk sections bottom-up; first one whose top is <= scrollY wins
-      let current = items[0].id;
+      // Find the last section that has started entering or passing the top area
+      let current = items[0]?.id ?? "";
       for (const { id } of items) {
         const el = document.getElementById(id);
         if (!el) continue;
-        if (el.getBoundingClientRect().top + window.scrollY <= scrollY) {
+        if (el.getBoundingClientRect().top <= OFFSET + 10) {
           current = id;
         }
       }
+
+      // Special case: bottom-out detection
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+      if (isAtBottom && items.length > 0) {
+        current = items[items.length - 1].id;
+      }
+
       setActive(current);
     };
 
@@ -37,8 +42,8 @@ export default function SidebarNavClient({ items }: { items: Item[] }) {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - OFFSET + 4;
-    window.scrollTo({ top, behavior: "smooth" });
+    el.scrollIntoView({ behavior: "smooth" });
+    setActive(id);
   };
 
   return (

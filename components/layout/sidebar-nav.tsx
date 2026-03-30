@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { id: "skills", label: "Skills" },
   { id: "blogs", label: "Blogs" },
   { id: "projects", label: "Projects" },
+  { id: "certifications", label: "Certifications" },
 ];
 
 export default function SidebarNav() {
