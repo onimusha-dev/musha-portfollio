@@ -212,7 +212,7 @@ export const GALLERY = [
         year: "2026",
     },
     {
-        src: "https://i.pinimg.com/1200x/b5/17/55/b51755ce08aa1dbf5b834710ce56f855.jpg",
+        src: "https://i.pinimg.com/1200x/b5/17/55/b51755ce08aa1dbf5b8347L10ce56f855.jpg",
         title: "Cat Girl",
         medium: "Digital Art",
         year: "2026",
@@ -225,7 +225,7 @@ export const certifications = [
         title: "Understanding Node.js: Core Concepts",
         issuer: "Udemy",
         date: "March 2026",
-        url: "https://www.udemy.com/certificate/UC-2f97a406-a9a7-49ff-aa6e-7b9ea4f19e39/",
+        url: "/images/Understanding_NodeJs.png",
         instructor: "Joseph Heidari",
         certificateId: "UC-2f97a406-a9a7-49ff-aa6e-7b9ea4f19e39",
     },

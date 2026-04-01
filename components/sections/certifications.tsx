@@ -1,4 +1,3 @@
-import React from "react";
 import { certifications } from "@/app/constants";
 import { ExternalLink, Award, Calendar, User } from "lucide-react";
 
@@ -37,7 +36,7 @@ export default function Certifications() {
                 <User className="w-4 h-4" />
                 <span>{cert.instructor}</span>
               </div>
-              
+
               <div className="flex items-center justify-between pt-2">
                 <div className="flex items-center gap-2 text-xs font-mono opacity-50">
                   <Calendar className="w-3.5 h-3.5" />
@@ -49,7 +48,7 @@ export default function Certifications() {
               </div>
             </div>
           </div>
-          
+
           {/* Subtle hover border glow */}
           <div className="absolute inset-0 border-2 border-orange-500/0 group-hover:border-orange-500/10 rounded-2xl transition-all duration-300 pointer-events-none" />
         </a>
