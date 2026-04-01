@@ -58,7 +58,7 @@ export default function Navbar() {
                                 <Link
                                     key={href}
                                     href={href}
-                                    className={`px-3 py-1.5 rounded-lg text-base transition-all duration-150 font-mono ${getActiveStyles(href)}`}
+                                    className={`px-5 py-1.5 rounded-lg text-base transition-all duration-150 font-mono ${getActiveStyles(href)}`}
                                 >
                                     {label}
                                 </Link>
@@ -69,22 +69,18 @@ export default function Navbar() {
 
                         {/* Connections */}
                         <div className="flex items-center gap-0.5 mr-2">
-                            {/* CV button — add your resume URL to RESUME_URL when ready */}
-                            {/* <button
-                                onClick={() => {
-                                    const RESUME_URL = ""; // TODO: add your resume link here
-                                    console.log("CV button clicked", RESUME_URL || "(no URL set yet)");
-                                    if (RESUME_URL) window.open(RESUME_URL, "_blank", "noopener,noreferrer");
-                                }}
+                            <a
+                                href="/musaddikul-islam.pdf"
+                                download
                                 className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-sm font-mono font-semibold border transition-all duration-150 text-foreground/60 hover:text-accent hover:border-accent/40 hover:bg-accent/5"
                                 style={{ borderColor: "var(--card-border)" }}
-                                aria-label="Download CV"
+                                aria-label="Download Resume"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
                                 </svg>
-                                CV
-                            </button> */}
+                                Resume
+                            </a>
                             <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="p-2 text-foreground/50 hover:text-accent transition-colors" aria-label="GitHub">
                                 <Icons.GitHub className="w-5 h-5" />
                             </a>
@@ -123,7 +119,7 @@ export default function Navbar() {
                             <Link
                                 key={href}
                                 href={href}
-                                className={`px-3 py-2.5 rounded-xl text-base font-mono transition-all duration-150 ${getActiveStyles(href)}`}
+                                className={`px-5 py-2.5 rounded-xl text-base font-mono transition-all duration-150 ${getActiveStyles(href)}`}
                             >
                                 {label}
                             </Link>
@@ -178,20 +174,17 @@ export default function Navbar() {
 
                     {/* Mobile Connections */}
                     <div className="pt-5 mt-5 flex items-center gap-3" style={{ borderTop: "1px solid var(--card-border)" }}>
-                        {/* <button
-                            onClick={() => {
-                                const RESUME_URL = ""; // TODO: add your resume link here
-                                console.log("CV button clicked", RESUME_URL || "(no URL set yet)");
-                                if (RESUME_URL) window.open(RESUME_URL, "_blank", "noopener,noreferrer");
-                            }}
+                        <a
+                            href="/musaddikul-islam.pdf"
+                            download
                             className="flex flex-1 justify-center py-2 items-center gap-2 text-base font-mono bg-accent/10 rounded-xl text-accent font-semibold hover:bg-accent/20 transition-all"
-                            aria-label="Download CV"
+                            aria-label="Download Resume"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
                             </svg>
-                            CV
-                        </button> */}
+                            Resume
+                        </a>
                         <a href="https://github.com/onimusha-dev" target="_blank" rel="noopener noreferrer" className="flex flex-1 justify-center py-2 items-center gap-2 text-base font-mono bg-foreground/5 rounded-xl text-foreground/50 hover:text-accent hover:bg-foreground/10 transition-all">
                             <Icons.GitHub className="w-5 h-5" /> GitHub
                         </a>
